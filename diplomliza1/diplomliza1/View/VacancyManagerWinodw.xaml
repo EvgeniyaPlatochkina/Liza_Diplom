@@ -1,0 +1,21 @@
+﻿<Window x:Class="diplomliza1.View.VacancyManagerWinodw"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diplomliza1.View"
+        mc:Ignorable="d"
+        Title="VacancyManagerWinodw" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Tile"/>
+            <TextBox Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Text="Earnings"/>
+            <TextBox Text="{Binding Earnings,UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Text="Description"/>
+            <TextBox Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}"/>
+            <Button x:Name="ActionButton" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+   
+    </Grid>
+</Window>
