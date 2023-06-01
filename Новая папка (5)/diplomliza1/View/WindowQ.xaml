@@ -1,0 +1,43 @@
+﻿<Window x:Class="diplomliza1.View.WindowQ"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diplomliza1.View"
+        mc:Ignorable="d"
+        Title="WindowQ" Height="450" Width="800"
+        Background="#1B545F"
+        FontFamily="Comic Sans MS">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#5F7080">
+
+  
+
+            <Button Height="50"
+                    Content="Резюме"
+                    Command="{Binding QuestionnarePageButton}"
+                   />
+
+
+            <Button Height="50"
+                    Content="Вакансия"
+                    Command="{Binding JobVacancyPageButton}"
+                    />
+
+            <Button Height="50" Margin="0 200"
+                    Content="Выйти"
+                   Click="Button_Click"
+                    />
+
+
+
+
+        </StackPanel>
+        <UserControl x:Name="UserPage" Grid.Column="1"/>
+
+    </Grid>
+</Window>
