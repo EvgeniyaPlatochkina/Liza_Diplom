@@ -45,7 +45,7 @@ namespace diplomliza1.ViewModels
                 UpdateLists();
             }
             else
-                MessageBox.Show("Выберите услуг", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Выберите", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
     }

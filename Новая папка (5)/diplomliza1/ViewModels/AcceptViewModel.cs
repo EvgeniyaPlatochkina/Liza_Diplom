@@ -19,19 +19,26 @@ namespace diplomliza1.ViewModels
         {
             _questionareService = new(ctx);
             _questionnare = questionnare;
-            DateOfMeeting = DateTime.Now;
         }
         private QuestionareService _questionareService;
         private Questionnare _questionnare;
-        private DateTime _dateOfMeeting;
-        public DateTime DateOfMeeting { get => _dateOfMeeting; set => Set(ref _dateOfMeeting, value, nameof(DateOfMeeting)); }
+        private string _dateOfMeeting;
+        public string DateOfMeeting { get => _dateOfMeeting; set => Set(ref _dateOfMeeting, value, nameof(DateOfMeeting)); }
         public Questionnare? Questionnare { get => _questionnare; set => Set(ref _questionnare, value, nameof(Questionnare)); }
+        private bool FieldsIsNull() =>
+           (string.IsNullOrEmpty(DateOfMeeting));
         private void EditQuestionnare()
         {
-             Questionnare.Status = Statuse.Принято.ToString();
-             Questionnare.MeetingDate = DateOfMeeting;
-              _questionareService.Update(Questionnare);
-              MessageBox.Show($"Вопрос обновлён!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (FieldsIsNull())
+                MessageBox.Show($"Укажите дату встречи!", "внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+            {
+                Questionnare.Status = Statuse.Принято.ToString();
+                Questionnare.MeetingDate = DateOfMeeting;
+                _questionareService.Update(Questionnare);
+                MessageBox.Show($"Обновлено!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+           
         }
         public ICommand EditQuestionnareButton => new Command(addreview => EditQuestionnare());
     }

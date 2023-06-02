@@ -52,7 +52,7 @@ namespace diplomliza1.ViewModels
         {
             Questionnare.Status = Statuse.Отколено.ToString();
             _questionareService.Update(Questionnare);
-            MessageBox.Show($"Вопрос обновлён!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show($"Успешно отклонено!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         public ICommand RejectQuestionnareButton => new Command(addreview => RejectQuestionnare());
         public ICommand OpenAcceptApplicantWindow => new Command(addquestion => OpenAcceptWindow());

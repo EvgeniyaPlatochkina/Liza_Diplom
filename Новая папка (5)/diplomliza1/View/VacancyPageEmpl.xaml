@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:diplomliza1.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="480" d:DesignWidth="800"
              FontFamily="Comic Sans MS">
     <Grid>
         <Grid.RowDefinitions>
@@ -22,9 +22,11 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Orientation="Horizontal" Width="300">
+                <TextBlock Text="Поиск" Margin="10" FontSize="15" />
 
-                <TextBox Width="300"
-                                 Margin="20,0,0,0"
+                <TextBox Width="209"
+                         Height="30"
+                         Margin="20,0,0,0"
                                  Tag="Введите текст для поиска программного продукта"
                         Text="{Binding SearchJobTitleValue,UpdateSourceTrigger=PropertyChanged}"/>
 
@@ -48,7 +50,7 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ListViewItem">
                                 <Border  Background="White"
-                                        BorderBrush="Transparent"
+                                        BorderBrush="Orange"
                                         BorderThickness="0"
                                         CornerRadius="10"
                                         Margin="10"
@@ -61,19 +63,17 @@
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="12"/>
                                         </Grid.ColumnDefinitions>
-                                        <Border Grid.Column="0" Background="Orange" CornerRadius="10,0,0,10"
-                                                x:Name="SideBorder1"/>
+                                 
                                         <StackPanel Grid.Column="1"
                                                     Margin="5">
-                                            <TextBlock Text="{Binding Title, StringFormat=Артикул: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding Title, StringFormat=Название: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding Description, StringFormat=Артикул: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding Description, StringFormat=Описание: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding Earnings, StringFormat=Артикул: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding Earnings, StringFormat=Заработная_плата: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
                                         </StackPanel>
-                                        <Border Grid.Column="4" Background="Orange" CornerRadius="0,10,10,0"
-                                                x:Name="SideBorder2"/>
+                                    
                                     </Grid>
 
                                 </Border>
@@ -105,12 +105,14 @@
                             VerticalAlignment="Center"
                     Width="200"
                     Height="30"
+                    Content="Добавить"
               
                     Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" />
             <Button Grid.Column="1"
                             HorizontalAlignment="Left"
                             Margin="5,0"
                             VerticalAlignment="Center"
+                     Content="Изменить"
                     Width="200"
                     Height="30"
           
@@ -119,6 +121,7 @@
                             HorizontalAlignment="Left"
                             Margin="5,0"
                             VerticalAlignment="Center"
+                     Content="Удалить"
                     Width="200"
                     Height="30"
                     Command="{Binding DeleteJobTitleButton,UpdateSourceTrigger=PropertyChanged}" />

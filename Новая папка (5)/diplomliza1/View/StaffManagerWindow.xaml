@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="StaffManagerWindow" Height="430" Width="800"  FontFamily="Comic Sans MS">
+        Title="Добавление сотрудника" Height="480" Width="800"  FontFamily="Comic Sans MS">
 
     <Grid Background="#936D60">
        

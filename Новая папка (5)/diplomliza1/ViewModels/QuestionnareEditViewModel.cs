@@ -148,7 +148,7 @@ namespace diplomliza1.ViewModels
             else
             {
                 _placeOfStudeService.Insert(new PlaceOfStudy { Title = PlacyOfStydeTitle, Speciality = Speciality, Education = SelectedEducation });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
             }
 
@@ -166,7 +166,7 @@ namespace diplomliza1.ViewModels
         {
 
             _experienceService.Insert(new WorkExperience { SpaseOfWork = SpaseOfWork, HoursWorked = HoursWorked });
-            MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
             UpdateLists();
 
 
@@ -216,7 +216,7 @@ namespace diplomliza1.ViewModels
                     Questionnare.AboutMe = AboutMe;
                     Questionnare.WorkExperienceId = SelectedWorkExperience.Id;
                     _questionareService.Update(Questionnare);
-                    MessageBox.Show($"Вопрос обновлён!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show($"Обновлено!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
@@ -237,7 +237,7 @@ namespace diplomliza1.ViewModels
                     Questionnare.AboutMe = AboutMe;
                     Questionnare.WorkExperienceId = null;
                     _questionareService.Update(Questionnare);
-                    MessageBox.Show($"Вопрос обновлён!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show($"Обновлено!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
               
             }

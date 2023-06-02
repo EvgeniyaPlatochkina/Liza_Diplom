@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:diplomliza1.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="480" d:DesignWidth="800"
              FontFamily="Comic Sans MS">
     <Grid>
         <Grid.RowDefinitions>
@@ -27,8 +27,8 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ListViewItem">
                                 <Border  Background="White"
-                                        BorderBrush="Transparent"
-                                        BorderThickness="0"
+                                        BorderBrush="Orange"
+                                        BorderThickness="1"
                                         CornerRadius="10"
                                         Margin="10"
                                         x:Name="Border"
@@ -42,8 +42,7 @@
                                             <ColumnDefinition Width="12"/>
 
                                         </Grid.ColumnDefinitions>
-                                        <Border Grid.Column="0" Background="Orange" CornerRadius="10,0,0,10"
-                                                x:Name="SideBorder1"/>
+                                      
                                         <Image   Source="{Binding Photo, UpdateSourceTrigger=PropertyChanged}"
                                             Height="100"
                                                Width="100"
@@ -56,19 +55,18 @@
                                                     Margin="5">
                                             <TextBlock Text="{Binding FullName, StringFormat=FIO: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding DateOfBirth, StringFormat=Артикул: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding DateOfBirth, StringFormat=Дата_рождения: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding Email, StringFormat=Артикул: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding Email, StringFormat=Email: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding Phone, StringFormat=Артикул: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding Phone, StringFormat=Номер_телефона: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding JobVacancy.Title, StringFormat=Артикул: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding JobVacancy.Title, StringFormat=Вакансия: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
 
                                         </StackPanel>
                                         <TextBlock  Grid.Column="3" VerticalAlignment="Center" Text="{Binding Status,UpdateSourceTrigger=PropertyChanged}"/>
-                                        <Border Grid.Column="4" Background="Orange" CornerRadius="0,10,10,0"
-                                                x:Name="SideBorder2"/>
+                                       
                                     </Grid>
 
                                 </Border>

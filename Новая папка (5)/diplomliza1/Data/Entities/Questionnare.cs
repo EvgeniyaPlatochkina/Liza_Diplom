@@ -19,7 +19,7 @@ namespace diplomliza1.Data.Entities
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; } = null!;
         public string Status { get; set; } = null!;
-        public DateTime MeetingDate { get; set; }       
+        public string? MeetingDate { get; set; }       
         public string Phone { get; set; } = null!;
         public int? WorkExperienceId { get; set; }
         public int FamilyStatusId { get; set; }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="WindowEmplooe" Height="450" Width="800"  FontFamily="Comic Sans MS"     
+        Title="Главное окно" Height="480" Width="800"  FontFamily="Comic Sans MS"     
        
         Background="#936D60">
     <Grid>
@@ -19,21 +19,25 @@
         <Button Height="50"
                     Content="Резюме"
                     Command="{Binding QuestionnarieApplicantPageButton}"
+                    Style="{StaticResource QuestionButton}"
                    />
 
         <Button Height="50"
                     Content="Сотрудники"
                     Command="{Binding StaffPageButton}"
+                    Style="{StaticResource EmployeesButton}"
                    />
 
         <Button Height="50"
                     Content="Вакансия"
                     Command="{Binding JobTitlePageButton}"
+                Style="{StaticResource VacancyButton}"
                     />
 
             <Button Height="50" Margin="0 150"
                     Content="Выйти"
                  Click="Button_Click"
+                    Style="{StaticResource ExitButton}"
                     />
 
 

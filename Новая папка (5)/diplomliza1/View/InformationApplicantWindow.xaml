@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="InformationApplicantWindow" Height="450" Width="800"
+        Title="Информация о соискателе" Height="480" Width="800"
         Background="#1B545F"
         FontFamily="Comic Sans MS">
     <Grid>

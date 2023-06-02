@@ -56,7 +56,7 @@ namespace diplomliza1.ViewModels
                 new VacancyManagerWinodw(SelectedJobTitle, _jobTitleService).ShowDialog();
             }
             else
-                MessageBox.Show("Выберите услуг", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Выберите", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
             UpdateLists();
         }
         private List<JobVacancy> SearchJobTitle(List<JobVacancy> jobTitles)
@@ -78,7 +78,7 @@ namespace diplomliza1.ViewModels
                 }
             }
             else
-                MessageBox.Show("Выберите услуг", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Выберите", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
         public ICommand DeleteJobTitleButton => new Command(delete => DeleteJobTitle());

@@ -16,7 +16,7 @@ namespace diplomliza1.Data.Entities
 
         public int Id { get; set; }
         public string Title { get; set; } = null!;
-        public int Earnings { get; set; } = 0!;
+        public string Earnings { get; set; } = null!;
         public string Description { get; set; } = null!;
 
         public ICollection<Questionnare> Questionnares { get; set; }

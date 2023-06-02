@@ -15,9 +15,9 @@ namespace diplomliza1.Data.Entities
         public string PostalCode { get; set; } = null!;
         public string Street { get; set; } = null!;
         public int House { get; set; } = 0!;
-        public int Housing { get; set; }
+        public string Housing { get; set; }
 
-        public int Apartament { get; set; }
+        public string Apartament { get; set; }
         public Staff Staff { get; set; }
 
         [NotMapped]

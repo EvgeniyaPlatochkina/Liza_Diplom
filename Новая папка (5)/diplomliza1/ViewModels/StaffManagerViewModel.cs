@@ -226,7 +226,7 @@ namespace diplomliza1.ViewModels
                 Staffs.PlaceOfStudyId = SelectedPlaceOfStudys.Id;
                 Staffs.MilitryDutyId = SelectedMilitryDutys.Id;
                 _staffService.Update(Staffs);
-                MessageBox.Show($"Вопрос обновлён!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Обновлено!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
                 MessageBox.Show("Заполните поля!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -265,7 +265,7 @@ namespace diplomliza1.ViewModels
                     GenderId = SelectedGenders.Id,
                     PlaceOfStudyId = SelectedPlaceOfStudys.Id,
                 });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
 
             }
@@ -283,7 +283,7 @@ namespace diplomliza1.ViewModels
             else
             {
                 _iNNService.Insert(new INN { Title = TitleINN });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
             }
 
@@ -324,27 +324,27 @@ namespace diplomliza1.ViewModels
             else
             {
                 _passportService.Insert(new Passport { Series = Series, Number = Number, IssuedBy = IssuedBy, IssuedByDate = IssuedByDate, Registration = Registration });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
             }
            
 
         }
         private int _house;
-        private int _housing;
+        private string _housing;
         private string _region;
         private string _city;
         private string _postalCode;
         private string _street;
-        private int _apartament;
+        private string _apartament;
         public int House { get => _house; set => Set(ref _house, value, nameof(House)); }
-        public int Housing { get => _housing; set => Set(ref _housing, value, nameof(Housing)); }
+        public string Housing { get => _housing; set => Set(ref _housing, value, nameof(Housing)); }
         public string Region { get => _region; set => Set(ref _region, value, nameof(Region)); }
         public string City { get => _city; set => Set(ref _city, value, nameof(City)); }
         public string PostalCode { get => _postalCode; set => Set(ref _postalCode, value, nameof(PostalCode)); }
         public string Street { get => _street; set => Set(ref _street, value, nameof(Street)); }
 
-        public int Apartament { get => _apartament; set => Set(ref _apartament, value, nameof(Apartament)); }
+        public string Apartament { get => _apartament; set => Set(ref _apartament, value, nameof(Apartament)); }
 
         private bool AdressFieldsIsNull() =>
            (string.IsNullOrEmpty(Region)
@@ -360,7 +360,7 @@ namespace diplomliza1.ViewModels
             else
             {
                 _addresService.Insert(new Address { House = House, Housing = Housing, Region = Region, City = City, PostalCode = PostalCode, Street = Street, Apartament = Apartament });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
             }
            
@@ -376,7 +376,7 @@ namespace diplomliza1.ViewModels
             else
             {
                 _snilsService.Insert(new SNILS { Title = SnilsTile });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
             }
            
@@ -399,7 +399,7 @@ namespace diplomliza1.ViewModels
             else
             {
                 _placeOfStudeService.Insert(new PlaceOfStudy { Title = PlacyOfStydeTitle, Speciality = Speciality, Education = SelectedEducation });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
             }
            

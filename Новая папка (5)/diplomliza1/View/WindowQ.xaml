@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="WindowQ" Height="450" Width="800"
-        Background="#1B545F"
+        Title="Главное окно" Height="480" Width="800"
+        Background="{StaticResource BackgroundLight}"
         FontFamily="Comic Sans MS">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,18 +20,20 @@
             <Button Height="50"
                     Content="Резюме"
                     Command="{Binding QuestionnarePageButton}"
+                     Style="{StaticResource QuestionButton}"
                    />
 
 
             <Button Height="50"
                     Content="Вакансия"
                     Command="{Binding JobVacancyPageButton}"
+                      Style="{StaticResource VacancyButton}"
                     />
 
             <Button Height="50" Margin="0 200"
                     Content="Выйти"
                    Click="Button_Click"
-                    />
+                        Style="{StaticResource ExitButton}"/>
 
 
 

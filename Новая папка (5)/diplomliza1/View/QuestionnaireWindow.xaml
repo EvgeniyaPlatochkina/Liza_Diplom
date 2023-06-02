@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="QuestionnaireWindow" Height="450" Width="800"  FontFamily="Comic Sans MS"
+        Title="Создание резюме" Height="480" Width="800"  FontFamily="Comic Sans MS"
         Background="#1B545F"
        >
     <Grid>

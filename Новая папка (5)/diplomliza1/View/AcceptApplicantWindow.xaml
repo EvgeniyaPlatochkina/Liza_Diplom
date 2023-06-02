@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="AcceptApplicantWindow" Height="250" Width="300">
+        Title="Назначение встречи" Height="250" Width="300">
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Дата встречи"/>
-            <DatePicker SelectedDate="{Binding DateOfMeeting,UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Content="Назначить" Command="{Binding EditQuestionnareButton,UpdateSourceTrigger=PropertyChanged}"/>
+            <DatePickerTextBox Text="{Binding DateOfMeeting,UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Content="Назначить" Command="{Binding EditQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Width="80"/>
         </StackPanel>
        
     </Grid>

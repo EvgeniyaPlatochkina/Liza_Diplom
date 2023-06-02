@@ -130,7 +130,7 @@ namespace diplomliza1.ViewModels
             else
             {
                 _placeOfStudeService.Insert(new PlaceOfStudy { Title = PlacyOfStydeTitle, Speciality = Speciality, Education = SelectedEducation });
-                MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Резюме добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateLists();
             }
             
@@ -143,13 +143,21 @@ namespace diplomliza1.ViewModels
         private string _hoursWorked;
         public string SpaseOfWork { get => _spaseOfWork; set => Set(ref _spaseOfWork, value, nameof(SpaseOfWork)); }
         public string HoursWorked { get => _hoursWorked; set => Set(ref _hoursWorked, value, nameof(HoursWorked)); }
-
+        private bool FieldsWorkIsNull() =>
+           (string.IsNullOrEmpty(SpaseOfWork)
+           || string.IsNullOrEmpty(HoursWorked)  
+           );
         private void AddWorkExpirience()
         {
-
-            _experienceService.Insert(new WorkExperience { SpaseOfWork = SpaseOfWork, HoursWorked = HoursWorked });
-            MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
-            UpdateLists();
+            if(FieldsWorkIsNull())
+                MessageBox.Show("Все поля должны быть заполнены!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+            {
+                _experienceService.Insert(new WorkExperience { SpaseOfWork = SpaseOfWork, HoursWorked = HoursWorked });
+                MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                UpdateLists();
+            }
+          
 
 
         }
@@ -205,7 +213,7 @@ namespace diplomliza1.ViewModels
                         UserId = _user.Id
 
                     }) ;
-                    MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                     UpdateLists();
                 }
                 else
@@ -234,7 +242,7 @@ namespace diplomliza1.ViewModels
                         UserId = _user.Id
 
                     });
-                    MessageBox.Show("продажа Добавлена!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Добавлено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
                     UpdateLists();
                 }
                 

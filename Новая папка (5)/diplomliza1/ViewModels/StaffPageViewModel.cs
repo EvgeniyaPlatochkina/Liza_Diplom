@@ -59,7 +59,7 @@ namespace diplomliza1.ViewModels
                 UpdateLists();
             }
             else
-                MessageBox.Show("Выберите услуг", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Выберите", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
             
         }
         private List<Staff> SearchStaff(List<Staff> jobTitles)
@@ -81,7 +81,7 @@ namespace diplomliza1.ViewModels
                 }
             }
             else
-                MessageBox.Show("Выберите услуг", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Выберите", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
         public ICommand DeleteStaffButton => new Command(delete => DeleteStaff());
