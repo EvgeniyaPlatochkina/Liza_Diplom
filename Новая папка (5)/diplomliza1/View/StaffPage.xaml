@@ -27,7 +27,7 @@
                          Margin="20,0,0,0"
                          Tag="Введите текст для поиска программного продукта"
                           Text="{Binding SearchStaff,UpdateSourceTrigger=PropertyChanged}"/>
-               
+
 
             </StackPanel>
 
@@ -63,7 +63,7 @@
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="12"/>
                                         </Grid.ColumnDefinitions>
-                                 
+
                                         <Image   Source="{Binding Photo, UpdateSourceTrigger=PropertyChanged}"
                                             Height="100"
                                                Width="100"
@@ -82,13 +82,13 @@
                                                    />
                                             <TextBlock Text="{Binding Phone, StringFormat=Номер_телефона: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding Address.Street, StringFormat=Адрес: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding Address.FullAdress, StringFormat=Адрес: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
                                             <TextBlock Text="{Binding Gender.Title, StringFormat=Пол: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            
+
                                         </StackPanel>
-                                   
+
                                     </Grid>
 
                                 </Border>
@@ -109,41 +109,47 @@
         <Grid Grid.Row="2">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="126*"/>
+                <ColumnDefinition Width="135*"/>
+                <ColumnDefinition Width="151*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="267*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0"
-                            HorizontalAlignment="Left"
-                            Margin="5,0"
+            <Button
+                            HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                     Content="Добавить"
-                    Width="200"
+                    Width="123"
                     Height="30"
               
                     Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" />
             <Button Grid.Column="1"
-                    HorizontalAlignment="Left"
-                    Margin="5,0"
+                    HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Width="200"
+                    Width="128"
                     Height="30"
                      Content="Изменить"
                     Command="{Binding OpenEditManagerWindow,UpdateSourceTrigger=PropertyChanged}" />
             <Button Grid.Column="2"
-                            HorizontalAlignment="Left"
-                            Margin="5,0"
+                            HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                      Content="Удалить"
-                    Width="200"
+                    Width="126"
                     Height="30"
                     Command="{Binding DeleteStaffButton,UpdateSourceTrigger=PropertyChanged}" />
 
+            <Button Grid.Column="3"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                     Content="Печать"
+                    Width="126"
+                    Height="30"
+                    Command="{Binding OpenPrintStaffButton,UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Grid.Column="1"
                                HorizontalAlignment="Center"
                                
-                               VerticalAlignment="Center"/>
+                               VerticalAlignment="Center" Height="16" Width="0"/>
 
         </Grid>
     </Grid>

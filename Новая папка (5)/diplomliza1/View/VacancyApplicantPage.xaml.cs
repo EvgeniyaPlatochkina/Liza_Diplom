@@ -24,10 +24,10 @@ namespace diplomliza1.View
     /// </summary>
     public partial class VacancyApplicantPage : UserControl
     {
-        public VacancyApplicantPage(ApplicationDbContext ctx,JobVacancyService jobVacancyService,User applicant, QuestionareService questionareService)
+        public VacancyApplicantPage(ApplicationDbContext ctx,JobVacancyService jobVacancyService,User applicant, QuestionareService questionareService,WorkExperienceService workExperience)
         {
             InitializeComponent();
-            DataContext = new ApplicantVacancyViewModePage(ctx,jobVacancyService, applicant, questionareService);
+            DataContext = new ApplicantVacancyViewModePage(ctx,jobVacancyService, applicant, questionareService, workExperience);
         }
     }
 }

@@ -39,6 +39,16 @@ namespace diplomliza1.ViewModels
         public Questionnare SelectedQuestionnares { get => _selectedQuestionnares; set => Set(ref _selectedQuestionnares, value, nameof(Questionnares)); }
         private ICollection<Questionnare> GetQuestionnare() => _questionareService.GetQuestionnare().Where(x=> x.UserId == _user.Id).ToList();
 
+        private void OpenPrintStaffWindow()
+        {
+            if (!SelectedQuestionnaresIsNull())
+            {
+                new PrintQuestionnare(_ctx, SelectedQuestionnares).ShowDialog();
+                UpdateLists();
+            }
+            else
+                MessageBox.Show("Выберите", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
         private bool SelectedQuestionnaresIsNull() => SelectedQuestionnares == null;
         private void UpdateLists()
         {
@@ -75,5 +85,7 @@ namespace diplomliza1.ViewModels
         }
         public ICommand DeleteStaffButton => new Command(delete => DeleteStaff());
         public ICommand OpenEditManagerWindow => new Command(addquestion => OpenEditStaffManagerWindow());
+        public ICommand OpenPrintQuestionButton => new Command(addquestion => OpenPrintStaffWindow());
+        
     }
 }

@@ -17,7 +17,7 @@ namespace diplomliza1.ViewModels
     public class QestionnatieViewModel : ViewModelBase
     {
 
-        public QestionnatieViewModel(ApplicationDbContext ctx, JobVacancy jobVacancy,QuestionareService questionareService,User user) 
+        public QestionnatieViewModel(ApplicationDbContext ctx, JobVacancy jobVacancy,QuestionareService questionareService,User user,WorkExperienceService workExperienceService) 
         {
             _jobVacancy = jobVacancy;
             _user = user;
@@ -28,7 +28,7 @@ namespace diplomliza1.ViewModels
             _familyStatusService = new(ctx);
             _genderService = new(ctx);
             _militryDutysService = new(ctx);
-            _experienceService =new(ctx);
+            _experienceService = workExperienceService;
             DateOfBirth = DateTime.Now;
             UpdateLists();
         }
@@ -40,7 +40,7 @@ namespace diplomliza1.ViewModels
             FamilyStatuse = _familyStatusService.GetFamilyStatus().ToList();
             MilitryDutys = _militryDutysService.GetMilitryDuty().ToList();
             Genders = _genderService.GetGenders().ToList();
-            WorkExperiences = _experienceService.GetWorkExperiences().ToList();
+            WorkExperiences = _experienceService.GetWorkExperiences();
             Photo = GetPhoto();
         }
         private List<Photo> GetPhoto()
@@ -56,7 +56,7 @@ namespace diplomliza1.ViewModels
         public JobVacancy SelectedJobVacancy { get => _jobVacancy; set => Set(ref _jobVacancy, value, nameof(SelectedJobVacancy)); }
         private EducationService _educationService;
         private PlaceOfStudeService _placeOfStudeService;
-        private WorkExperienceService? _experienceService;
+        private WorkExperienceService _experienceService;
         private FamilyStatusService _familyStatusService;
         private GenderService _genderService;
         private MilitryDutysService _militryDutysService;
@@ -233,6 +233,7 @@ namespace diplomliza1.ViewModels
                         GenderId = SelectedGenders.Id,
                         PlaceOfStudyId = SelectedPlaceOfStudys.Id,
                         Recommendations = Recommendations,
+             
                         //MeetingDate = DateTime.Now,
                         Skills = Skills,
                         PersonalQualities = PersonalQualities,

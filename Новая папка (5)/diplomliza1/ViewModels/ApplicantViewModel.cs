@@ -24,6 +24,7 @@ namespace diplomliza1.ViewModels
             _staffService = new(ctx);
             _questionareService = new(ctx);
             _ctx = ctx;
+            _workExperience = new(ctx);
             _applicant = user;
             AplicantPage = employePage;
            
@@ -35,6 +36,7 @@ namespace diplomliza1.ViewModels
         private StaffService _staffService;
         private QuestionareService _questionareService;
         private Questionnare Questionnare;
+        private WorkExperienceService _workExperience;
         //private CategoryService _categoryService;
         //private ServiceService _serviceService;
         //private ProductOrderService _productOrderService;
@@ -46,10 +48,12 @@ namespace diplomliza1.ViewModels
         private User _applicant;
         private UserControl _aplicantPage;
         public UserControl AplicantPage { get => _aplicantPage; set => Set(ref _aplicantPage, value, nameof(AplicantPage)); }
-        private void OpenVacancyApplicantPage() => AplicantPage.Content = new VacancyApplicantPage(_ctx, _jobVacancyService, _applicant, _questionareService);
+        private void OpenVacancyApplicantPage() => AplicantPage.Content = new VacancyApplicantPage(_ctx, _jobVacancyService, _applicant, _questionareService, _workExperience);
         private void OpenQuestionnareApplicantPage() => AplicantPage.Content = new QuestionnairePage(_ctx, Questionnare,_questionareService, _applicant);
+        private void OpneInfomationWorkPage() => AplicantPage.Content = new InformationWork();
         public ICommand JobVacancyPageButton => new Command(JopTilepage => OpenVacancyApplicantPage());
         public ICommand QuestionnarePageButton => new Command(Questionnare => OpenQuestionnareApplicantPage());
+        public ICommand InfomationWorkPageButton => new Command(Questionnare => OpneInfomationWorkPage());
         public void ExitApplicantWindow()
         {
             new MainWindow().Show();

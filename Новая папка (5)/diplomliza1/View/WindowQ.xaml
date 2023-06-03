@@ -29,7 +29,12 @@
                     Command="{Binding JobVacancyPageButton}"
                       Style="{StaticResource VacancyButton}"
                     />
-
+            <Button Height="50"
+                    Content="Вакансия"
+                    Command="{Binding InfomationWorkPageButton}"
+                      Style="{StaticResource InformationButton}"
+                    />
+            
             <Button Height="50" Margin="0 200"
                     Content="Выйти"
                    Click="Button_Click"

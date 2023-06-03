@@ -45,8 +45,8 @@
                         <TextBlock Text="Прошлое место работы"/>
                         <ComboBox ItemsSource="{Binding WorkExperiences,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedWorkExperience,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
-                                  DisplayMemberPath="FullWorkExperience"/>
+                                  DisplayMemberPath="FullWorkExperience"
+                            IsEditable="True"/>
                         <TextBlock Text="Cемейное положение"/>
                         <ComboBox ItemsSource="{Binding FamilyStatuse,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedFamilyStatuse,UpdateSourceTrigger=PropertyChanged}"

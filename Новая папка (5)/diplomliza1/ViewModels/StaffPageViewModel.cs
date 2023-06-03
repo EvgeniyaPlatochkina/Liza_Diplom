@@ -31,7 +31,16 @@ namespace diplomliza1.ViewModels
         public Staff SelectedStaff { get => _selectedStaff; set => Set(ref _selectedStaff, value, nameof(SelectedStaff)); }
         public List<Staff> Staffs { get => _staff; set => Set(ref _staff, value, nameof(Staffs)); }
         private ICollection<Staff> GetStaff() => SearchStaff(_staffService.GetStaff().ToList());
-
+        private void OpenPrintStaffWindow()
+        {
+            if (!SelectedJobTitleIsNull())
+            {
+                new PrintStaff(_ctx, SelectedStaff).ShowDialog();
+                UpdateLists();
+            }
+            else
+                MessageBox.Show("Выберите", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
         private bool SelectedJobTitleIsNull() => SelectedStaff == null;
         public string SearchStaffValue
         {
@@ -88,5 +97,8 @@ namespace diplomliza1.ViewModels
 
         public ICommand OpenAddManagerWindow => new Command(addquestion => OpenAddStaffManagerWindow());
         public ICommand OpenEditManagerWindow => new Command(addquestion => OpenEditStaffManagerWindow());
+
+        public ICommand OpenPrintStaffButton => new Command(addquestion => OpenPrintStaffWindow());
+        
     }
 }

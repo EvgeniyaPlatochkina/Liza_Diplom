@@ -44,13 +44,14 @@ namespace diplomliza1.ViewModels
             SelectedPlaceOfStudys = questionnare.PlaceOfStudy;
             SelectedMilitryDutys = questionnare.MilitryDuty;
             SelectedFamilyStatuse = questionnare.FamilyStatus;
+            SelectedWorkExperience = questionnare.WorkExperience;
             Photo = GetPhoto();
             UpdateLists();
             //WorkExperienceId = SelectedWorkExperience.Id
         }
         private void UpdateLists()
         {
-
+            WorkExperiences = _experienceService.GetWorkExperiences();
             PlaceOfStudys = _placeOfStudeService.GetPlaceOfStudy();
             Educations = _educationService.GetEducation().ToList();
             FamilyStatuse = _familyStatusService.GetFamilyStatus().ToList();

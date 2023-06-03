@@ -23,10 +23,10 @@ namespace diplomliza1.View
     /// </summary>
     public partial class QuestionnaireWindow : Window
     {
-        public QuestionnaireWindow(ApplicationDbContext ctx,JobVacancy jobTitle, JobVacancyService jobTitleService,QuestionareService questionareService,User user)
+        public QuestionnaireWindow(ApplicationDbContext ctx,JobVacancy jobTitle, JobVacancyService jobTitleService,QuestionareService questionareService,User user, WorkExperienceService workExperienceService)
         {
             InitializeComponent();
-            DataContext = new QestionnatieViewModel(ctx,jobTitle, questionareService, user);
+            DataContext = new QestionnatieViewModel(ctx,jobTitle, questionareService, user, workExperienceService);
         }
     }
 }

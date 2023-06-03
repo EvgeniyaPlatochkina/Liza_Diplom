@@ -157,5 +157,25 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <ImageBrush x:Key="InformationButtonImage"
+                ImageSource="C:\Users\Александр\Desktop\Liza_Diplom\Новая папка (5)\diplomliza1\Resources\Styles\Picture\Button\information.png"
+                Stretch="Uniform"/>
+
+    <Style x:Key="InformationButton" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{StaticResource InformationButtonImage}"
+                            Height="40"
+                            Width="40"
+                            Margin="5"
+                            BorderBrush="{StaticResource BackgroundLight}"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            x:Name="Border"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>
