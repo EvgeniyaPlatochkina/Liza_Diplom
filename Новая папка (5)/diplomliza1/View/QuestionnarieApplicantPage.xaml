@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:diplomliza1.View"
              mc:Ignorable="d" 
-             d:DesignHeight="480" d:DesignWidth="800"
+             d:DesignHeight="480" d:DesignWidth="850"
              FontFamily="Cascadia Mono SemiBold">
     <Grid>
         <Grid.RowDefinitions>
@@ -13,6 +13,9 @@
             <RowDefinition />
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
+        <ComboBox Grid.Row="0" Margin="134,0,400,0"
+                  ItemsSource="{Binding ProductFilthersTtile,UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding SelectedProductFiltherTitle,UpdateSourceTrigger=PropertyChanged}"/>
         <ListView Grid.Row="1"
                           ItemsSource="{Binding Questionnares,UpdateSourceTrigger=PropertyChanged}"
                           SelectedItem="{Binding SelectedQuestionnares,UpdateSourceTrigger=PropertyChanged}"
@@ -38,7 +41,7 @@
                                             <ColumnDefinition Width="12"/>
                                             <ColumnDefinition Width="120"/>
                                             <ColumnDefinition/>
-                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="110"/>
                                             <ColumnDefinition Width="12"/>
 
                                         </Grid.ColumnDefinitions>
@@ -62,7 +65,7 @@
                                             <TextBlock Text="{Binding Phone, StringFormat=Номер_телефона: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
                                             <TextBlock Text="{Binding JobVacancy.Title, StringFormat=Вакансия: {0},UpdateSourceTrigger=PropertyChanged}"
-                                                   />
+                                                   TextWrapping="Wrap"/>
 
                                         </StackPanel>
                                         <TextBlock  Grid.Column="3" VerticalAlignment="Center" Text="{Binding Status,UpdateSourceTrigger=PropertyChanged}"/>

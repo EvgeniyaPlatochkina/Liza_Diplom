@@ -12,6 +12,7 @@
             <RowDefinition />
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
+     
         <ListView Grid.Row="1"
                           ItemsSource="{Binding JobTitles,UpdateSourceTrigger=PropertyChanged}"
                           SelectedItem="{Binding SelectedJobTitle,UpdateSourceTrigger=PropertyChanged}"

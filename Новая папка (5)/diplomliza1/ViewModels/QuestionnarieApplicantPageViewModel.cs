@@ -20,16 +20,38 @@ namespace diplomliza1.ViewModels
             _questionareService = questionareService;
             _ctx = ctx;
             _questionnare = questionnaire;
+            _vacancyService = new(ctx);
+            ProductFilthersTtile = new List<string> { "Не выбрана" };
+            ProductFilthersTtile.AddRange(_vacancyService.GetJobTitle().Select(c => c.Title).ToList());
+            SelectedProductFiltherTitle = ProductFilthersTtile[0];
             UpdateLists();
         }
         private ApplicationDbContext _ctx;
         private QuestionareService _questionareService;
+        private JobVacancyService _vacancyService;
         private Questionnare _questionnare;
         private List<Questionnare> _questionnares;
+        private string _selectedProductFiltherTitle;
+        public List<string> ProductFilthersTtile { get; set; } = null!;
+        public string SelectedProductFiltherTitle
+        {
+            get => _selectedProductFiltherTitle; set
+            {
+                if (Set(ref _selectedProductFiltherTitle, value, nameof(SelectedProductFiltherTitle)))
+                    UpdateLists();
+            }
+        }
+        private List<Questionnare> FiltherProductsTitle(List<Questionnare> productOrders)
+        {
+            if (!(SelectedProductFiltherTitle == ProductFilthersTtile[0]))
+                return productOrders.Where(p => p.JobVacancy.Title == SelectedProductFiltherTitle).ToList();
+            else
+                return productOrders;
+        }
         public List<Questionnare> Questionnares { get => _questionnares; set => Set(ref _questionnares, value, nameof(Questionnares)); }
         private Questionnare _selectedQuestionnares;
         public Questionnare SelectedQuestionnares { get => _selectedQuestionnares; set => Set(ref _selectedQuestionnares, value, nameof(Questionnares)); }
-        private ICollection<Questionnare> GetQuestionnare() => _questionareService.GetQuestionnare().ToList();
+        private ICollection<Questionnare> GetQuestionnare() => FiltherProductsTitle(_questionareService.GetQuestionnare().ToList());
         private bool SelectedJobTitleIsNull() => SelectedQuestionnares == null;
         public ICommand QuestionnarieApplicantPageButton => new Command(staffpage => OpenInfomationApplicantWindow());
         private void UpdateLists()
