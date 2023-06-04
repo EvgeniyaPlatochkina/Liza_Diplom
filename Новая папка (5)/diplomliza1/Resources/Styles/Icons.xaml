@@ -5,5 +5,5 @@
     <ImageSource x:Key="Exit">\Resources\Styles\Picture\Button\Exit.png</ImageSource>
     <ImageSource x:Key="magnifying">\Resources\Styles\Picture\Button\magnifying.png</ImageSource>
     <ImageSource x:Key="Logo">\Resources\Icons\Logo.png</ImageSource>
-
+    <ImageSource x:Key="Icon">\Resources\Icons\Icon.ico</ImageSource>
 </ResourceDictionary>

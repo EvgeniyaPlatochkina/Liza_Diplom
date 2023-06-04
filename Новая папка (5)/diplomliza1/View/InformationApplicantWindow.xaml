@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
+          Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
         Title="Информация о соискателе" Height="480" Width="800"
         Background="{StaticResource BackgroundLight}"

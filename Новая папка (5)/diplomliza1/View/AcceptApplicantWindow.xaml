@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
+          Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
         Title="Назначение встречи" Height="100" Width="150" Background="#EDD5D1" FontFamily="Cascadia Mono SemiBold">
     <Grid>

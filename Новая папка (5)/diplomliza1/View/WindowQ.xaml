@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        Icon="{StaticResource Icon}"
         Title="Главное окно" Height="480" Width="800"
         Background="{StaticResource BackgroundLight}"
          FontFamily="Cascadia Mono SemiBold">
