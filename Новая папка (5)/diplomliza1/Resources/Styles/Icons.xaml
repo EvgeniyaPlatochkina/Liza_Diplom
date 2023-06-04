@@ -6,4 +6,6 @@
     <ImageSource x:Key="magnifying">\Resources\Styles\Picture\Button\magnifying.png</ImageSource>
     <ImageSource x:Key="Logo">\Resources\Icons\Logo.png</ImageSource>
     <ImageSource x:Key="Icon">\Resources\Icons\Icon.ico</ImageSource>
+    <ImageSource x:Key="Br1">\Resources\Pictures\BR1.png</ImageSource>
+    <ImageSource x:Key="Br2">\Resources\Pictures\BR2.png</ImageSource>
 </ResourceDictionary>

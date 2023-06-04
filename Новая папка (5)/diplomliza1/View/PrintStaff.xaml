@@ -24,8 +24,8 @@
 
 
             <StackPanel Grid.Column="0" Margin="30,10,10,10" >
-                <Image Source="C:\Users\Александр\Desktop\Liza_Diplom\Новая папка (5)\diplomliza1\Resources\Pictures\BR2.png" Height="68" Width="367" HorizontalAlignment="Left"/>
-                <Image Source="C:\Users\Александр\Desktop\Liza_Diplom\Новая папка (5)\diplomliza1\Resources\Pictures\BR1.png" Height="72" Width="231" HorizontalAlignment="Left"/>
+                <Image Source="{StaticResource Br2}" Height="68" Width="367" HorizontalAlignment="Left"/>
+                <Image Source="{StaticResource Br1}" Height="72" Width="231" HorizontalAlignment="Left"/>
                 <TextBlock Text="Сотрудник" FontSize="20" />
                 <TextBlock Text="ФИО" FontSize="10" />
                 <Label Content="{Binding Staffs.FullName}"/>

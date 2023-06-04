@@ -15,6 +15,7 @@
             <ColumnDefinition Width="60"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+       
         <StackPanel   Background="{StaticResource BackgroundVeryDark2}">
 
   
