@@ -24,6 +24,7 @@ namespace diplomliza1.Data.Entities
         public ICollection<Questionnare> Questionnares { get; set; }
 
         [NotMapped]
-        public string FullPlaceOfStudy { get => $"{Title} {Speciality}"; }
+        public string FullPlaceOfStudy { get => $" {Title} {Speciality}"; }
+        public string FullPlaceOfStudy1 { get => $"Место обучения: {Title}, Специальность: {Speciality}"; }
     }
 }

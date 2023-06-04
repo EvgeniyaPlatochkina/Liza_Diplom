@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:diplomliza1.View"
              mc:Ignorable="d" 
              d:DesignHeight="480" d:DesignWidth="800"
-             FontFamily="Comic Sans MS">
+              FontFamily="Cascadia Mono SemiBold">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -69,7 +69,7 @@
                                             <TextBlock Text="{Binding Title, StringFormat=Название: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
                                             <TextBlock Text="{Binding Description, StringFormat=Описание: {0},UpdateSourceTrigger=PropertyChanged}"
-                                                   />
+                                                 TextWrapping="Wrap"  />
                                             <TextBlock Text="{Binding Earnings, StringFormat=Заработная_плата: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
                                         </StackPanel>
@@ -106,9 +106,10 @@
                     Width="200"
                     Height="30"
                     Content="Добавить"
-              
+              Background="{StaticResource BackgroundVeryDark2}"
                     Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" />
             <Button Grid.Column="1"
+                    Background="{StaticResource BackgroundVeryDark2}"
                             HorizontalAlignment="Left"
                             Margin="5,0"
                             VerticalAlignment="Center"
@@ -118,6 +119,7 @@
           
                     Command="{Binding OpenEditManagerWindow,UpdateSourceTrigger=PropertyChanged}" />
             <Button Grid.Column="2"
+                    Background="{StaticResource BackgroundVeryDark2}"
                             HorizontalAlignment="Left"
                             Margin="5,0"
                             VerticalAlignment="Center"

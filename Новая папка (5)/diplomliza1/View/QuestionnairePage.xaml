@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:diplomliza1.View"
              mc:Ignorable="d" 
              d:DesignHeight="480" d:DesignWidth="800"
-             FontFamily="Comic Sans MS">
+                 FontFamily="Cascadia Mono SemiBold">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -97,9 +97,9 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Изменить резюме" Command="{Binding OpenEditManagerWindow,UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Grid.Column="1"  Content="Удалить резюме" Command="{Binding DeleteStaffButton,UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Grid.Column="2"  Content="Печать резюме" Command="{Binding OpenPrintQuestionButton,UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.Column="0" Content="Изменить резюме" Command="{Binding OpenEditManagerWindow,UpdateSourceTrigger=PropertyChanged}" Margin="10,3" Background="{StaticResource BackgroundVeryDark2}"/>
+            <Button Grid.Column="1"  Content="Удалить резюме" Command="{Binding DeleteStaffButton,UpdateSourceTrigger=PropertyChanged}" Margin="10,3" Background="{StaticResource BackgroundVeryDark2}" />
+            <Button Grid.Column="2"  Content="Печать резюме" Command="{Binding OpenPrintQuestionButton,UpdateSourceTrigger=PropertyChanged}" Margin="10,3" Background="{StaticResource BackgroundVeryDark2}"/>
         </Grid>
     </Grid>
 </UserControl>

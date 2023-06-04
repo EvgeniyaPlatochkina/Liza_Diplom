@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="Добавление вакансии" Height="450" Width="450" FontFamily="Comic Sans MS"
-        Background="#936D60">
+        WindowStartupLocation="CenterScreen"
+        Title="Добавление вакансии" Height="450" Width="450" FontFamily="Cascadia Mono SemiBold"
+           Background="{StaticResource BackgroundLight}">
     <Grid>
         <StackPanel>
             <TextBlock Text="Название" Margin="10,10,10,0"/>
@@ -14,8 +15,8 @@
             <TextBlock Text="Заработная плата" Margin="10,10,10,0"/>
             <TextBox Text="{Binding Earnings,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
             <TextBlock Text="Описание" Margin="10,10,10,0"/>
-            <TextBox Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Height="85"/>
-            <Button x:Name="ActionButton" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="40" Width="150" Content="Добавить"/>
+            <TextBox Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Height="85" TextWrapping="Wrap"/>
+            <Button x:Name="ActionButton" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="40" Width="150" Content="Добавить" Background="{StaticResource BackgroundDark}"/>
         </StackPanel>
    
     </Grid>

@@ -22,5 +22,6 @@ namespace diplomliza1.Data.Entities
 
         [NotMapped]
         public string FullAdress { get => $"{City} {Street} {House}"; }
+        public string FullAdress1 { get => $"Область: {Region}, город: {City}, улица: {Street}, дом: {House}, корпус: {Housing}, квартира: {Apartament}"; }
     }
 }

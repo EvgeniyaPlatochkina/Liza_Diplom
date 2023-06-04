@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:diplomliza1.View"
              mc:Ignorable="d" 
-             d:DesignHeight="480" d:DesignWidth="800" FontFamily="Comic Sans MS">
+             d:DesignHeight="480" d:DesignWidth="800"     FontFamily="Cascadia Mono SemiBold">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -44,7 +44,7 @@
                                                     Margin="5">
                                             <TextBlock Text="{Binding Title, StringFormat=Название: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
-                                            <TextBlock Text="{Binding Description, StringFormat=Описание: {0},UpdateSourceTrigger=PropertyChanged}"
+                                            <TextBlock Text="{Binding Description, StringFormat=Описание: {0},UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"
                                                    />
                                             <TextBlock Text="{Binding Earnings, StringFormat=Заработная_плата: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
@@ -72,7 +72,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Оставить резюме" Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Content="Оставить резюме" Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" Background="{StaticResource BackgroundVeryDark2}" Margin="10,3"/>
         </Grid>
     </Grid>
 </UserControl>

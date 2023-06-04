@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="Назначение встречи" Height="250" Width="300">
+        WindowStartupLocation="CenterScreen"
+        Title="Назначение встречи" Height="100" Width="150" Background="#EDD5D1" FontFamily="Cascadia Mono SemiBold">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <TextBlock Text="Дата встречи"/>
-            <DatePickerTextBox Text="{Binding DateOfMeeting,UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Content="Назначить" Command="{Binding EditQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Width="80"/>
+            <TextBlock Text="Дата встречи" Width="99" HorizontalAlignment="Center" TextAlignment="Center"/>
+            <DatePickerTextBox Text="{Binding DateOfMeeting, UpdateSourceTrigger=PropertyChanged}" Width="109" HorizontalAlignment="Center" TextAlignment="Center"/>
+            <Button Content="Назначить" Command="{Binding EditQuestionnareButton, UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="10" Background="#739DA8" FontStyle="Italic"/>
         </StackPanel>
-       
+
     </Grid>
 </Window>

@@ -19,5 +19,6 @@ namespace diplomliza1.Data.Entities
 
         [NotMapped]
         public string FullPassport { get => $"{Series} {Number}"; }
+        public string FullPassport1 { get => $"Серия: {Series}, номер: {Number}, кем выдан: {IssuedBy}, дата выдачи: {IssuedByDate}, прописка: {Registration}"; }
     }
 }

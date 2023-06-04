@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
-        Title="Добавление сотрудника" Height="480" Width="800"  FontFamily="Comic Sans MS">
+        WindowStartupLocation="CenterScreen"
+        Title="Добавление сотрудника" Height="480" Width="800"       FontFamily="Cascadia Mono SemiBold">
 
-    <Grid Background="#936D60">
+    <Grid Background="{StaticResource BackgroundLight}">
        
         <TabControl Background="Transparent">
             <TabItem Header="Сотрудник">
@@ -97,7 +98,7 @@
                             IsEditable="True"
                               SelectedItem="{Binding SelectedPlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="FullPlaceOfStudy"/>
-                        <Button x:Name="ActionButton" Content="Сохранить" Command="{Binding AddStaffButton,UpdateSourceTrigger=PropertyChanged}" Margin="10" Height="40" Width="100"/>
+                        <Button x:Name="ActionButton" Content="Сохранить" Command="{Binding AddStaffButton,UpdateSourceTrigger=PropertyChanged}" Margin="10" Height="40" Width="100" Background="{StaticResource BackgroundDark}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -114,7 +115,7 @@
                         <TextBox Text="{Binding IssuedByDate,UpdateSourceTrigger=PropertyChanged}"  Margin="10,0,10,0"/>
                         <TextBlock Text="Прописка" Margin="10,10,10,0"/>
                         <TextBox Text="{Binding Registration,UpdateSourceTrigger=PropertyChanged}"  Margin="10,0,10,0"/>
-                    <Button Content="Добавить" Command="{Binding AddPassportButton,UpdateSourceTrigger=PropertyChanged}" Margin="70" Height="40" Width="150"/>
+                        <Button Content="Добавить" Command="{Binding AddPassportButton,UpdateSourceTrigger=PropertyChanged}" Margin="70" Height="40" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
                 </Grid>
             </TabItem>
@@ -136,7 +137,7 @@
                         <TextBox Text="{Binding Apartament,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
                         <TextBlock Text="Почтовый индекс" Margin="10,10,10,0"/>
                         <TextBox Text="{Binding PostalCode,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
-                        <Button Content="Добавить" Command="{Binding AddAdressButton,UpdateSourceTrigger=PropertyChanged}" Margin="5" Height="35" Width="150"/>
+                        <Button Content="Добавить" Command="{Binding AddAdressButton,UpdateSourceTrigger=PropertyChanged}" Margin="5" Height="35" Width="150" Background="{StaticResource BackgroundDark}" />
                 </StackPanel>
                 </Grid>
             </TabItem>
@@ -152,7 +153,7 @@
                     <ComboBox ItemsSource="{Binding Educations,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"
                               SelectedItem="{Binding SelectedEducation,UpdateSourceTrigger=PropertyChanged}"
                               DisplayMemberPath="Title"/>
-                    <Button Content="Добавить" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150"/>
+                    <Button Content="Добавить" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
                 
             </TabItem>
@@ -161,14 +162,14 @@
 
                     <TextBlock Text="Номер ИНН"  Margin="10,10,10,0"/>
                     <TextBox Text="{Binding TitleINN,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
-                    <Button Content="Добавить" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150"/>
+                    <Button Content="Добавить" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Номер СНИЛС">
                 <StackPanel>
                     <TextBlock Text="CНИЛС" Margin="10,10,10,0"/>
                     <TextBox Text="{Binding SnilsTile,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
-                    <Button Content="Добавить" Command="{Binding AddSnilsButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150"/>
+                    <Button Content="Добавить" Command="{Binding AddSnilsButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
              
             </TabItem>

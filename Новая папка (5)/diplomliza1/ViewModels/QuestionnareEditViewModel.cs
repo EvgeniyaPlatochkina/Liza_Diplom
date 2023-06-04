@@ -63,8 +63,12 @@ namespace diplomliza1.ViewModels
         private List<Photo> GetPhoto()
         {
             var list = new List<Photo>();
-            list.Add(new Photo(@"\Resources\Pictures\_men.png"));
-            list.Add(new Photo(@"\Resources\Pictures\_women.png"));
+            list.Add(new Photo(@"\Resources\Pictures\_man.png"));
+            list.Add(new Photo(@"\Resources\Pictures\_woman.png"));
+            list.Add(new Photo(@"\Resources\Pictures\_man1.png"));
+            list.Add(new Photo(@"\Resources\Pictures\_woman1.png"));
+            list.Add(new Photo(@"\Resources\Pictures\_man2.png"));
+            list.Add(new Photo(@"\Resources\Pictures\_woman2.png"));
             return list;
         }
         private QuestionareService _questionareService;

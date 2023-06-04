@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Изменение резюме" Height="480" Width="800"
-        Background="#1B545F"
-        FontFamily="Comic Sans MS">
+         Background="{StaticResource BackgroundLight}"
+        FontFamily="Cascadia Mono SemiBold">
     <Grid>
         <TabControl Background="Transparent">
             <TabItem Header="Резюме">
@@ -63,8 +64,7 @@
                         <ComboBox ItemsSource="{Binding Genders,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedGenders,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title"/>
-                        <TextBlock Text="Вакансия"/>
-                        <TextBox/>
+                      
                         <TextBlock Text="Место обучения"/>
                         <ComboBox ItemsSource="{Binding PlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
                                         IsEditable="True"
@@ -73,12 +73,13 @@
                         <TextBlock Text="Рекомендации"/>
                         <TextBox Height="25" Text="{Binding Recommendations,UpdateSourceTrigger=PropertyChanged}" />
                         <TextBlock Text="Навыки"/>
-                        <TextBox Height="27" Text="{Binding Skills,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Height="27" Text="{Binding Skills,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                         <TextBlock Text="Личные качества"/>
-                        <TextBox Height="34" Text="{Binding PersonalQualities,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Height="34" Text="{Binding PersonalQualities,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                         <TextBlock Text="Обо мне"/>
-                        <TextBox Height="52" Text="{Binding AboutMe,UpdateSourceTrigger=PropertyChanged}"/>
-                        <Button Command="{Binding EditQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Сохранить" Margin="10" Height="40" Width="150"/>
+                        <TextBox Height="52" Text="{Binding AboutMe,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
+                        <Button Command="{Binding EditQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Сохранить" Margin="10" Height="40" Width="150"
+                                 Background="{StaticResource BackgroundVeryDark2}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -93,7 +94,8 @@
                     <ComboBox ItemsSource="{Binding Educations,UpdateSourceTrigger=PropertyChanged}"
                               SelectedItem="{Binding SelectedEducation,UpdateSourceTrigger=PropertyChanged}"
                             DisplayMemberPath="Title"/>
-                    <Button Content="Save" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="200" Height="40" Width="150"/>
+                    <Button Content="Save" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="200" Height="40" Width="150"
+                             Background="{StaticResource BackgroundVeryDark2}"/>
                 </StackPanel>
 
             </TabItem>
@@ -104,7 +106,8 @@
                     <TextBox Text="{Binding SpaseOfWork,UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock Text="Отработанное время"/>
                     <TextBox Text="{Binding HoursWorked,UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Content="Сохранить" Command="{Binding AddWorkExpirienceButton, UpdateSourceTrigger=PropertyChanged}" Margin="240" Height="40" Width="150"/>
+                    <Button Content="Сохранить" Command="{Binding AddWorkExpirienceButton, UpdateSourceTrigger=PropertyChanged}" Margin="240" Height="40" Width="150"
+                             Background="{StaticResource BackgroundVeryDark2}"/>
                 </StackPanel>
 
             </TabItem>

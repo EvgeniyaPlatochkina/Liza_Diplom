@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Авторизация" Height="400" Width="300">
-    <Grid Background="#FFCF37">
+        Title="Авторизация" Height="400" Width="300" FontFamily="Cascadia Mono SemiBold">
+    <Grid Background="{StaticResource BackgroundDark}">
         <Grid.RowDefinitions>
             <RowDefinition Height="57"/>
             <RowDefinition/>
@@ -16,45 +16,41 @@
         <TextBlock Text="Авторизация"
                    HorizontalAlignment="Center"
                    FontSize="25"
-                   FontFamily="Comic Sans MS"
-                   Margin="0,8,0,0" Width="156"/>
-        <Image Source="C:\Users\sasha\Desktop\Новая папка (5)\diplomliza1\Resources\Icons\Logo.png" Margin="103,56,103,202" Grid.RowSpan="2"/>
+                   Margin="0,8,0,0" Width="166"/>
+        <Image Source="{StaticResource Logo}" Margin="103,56,103,202" Grid.RowSpan="2"/>
 
         <StackPanel VerticalAlignment="Top"
                                 Grid.Row="1" Height="231" Margin="0,110,0,0" Grid.RowSpan="2">
             <TextBlock HorizontalAlignment="Center" 
                 Text="Логин"
                        FontSize="15"
-                        FontFamily="Comic Sans MS"/>
+                        />
             <TextBox Width="170"
                      MaxLength="20"
                      Margin="10"
-                     
-                      FontFamily="Comic Sans MS"
-                     Tag="Введите логин"
+                      Tag="Введите логин"
                      Text="{Binding Login,UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock HorizontalAlignment="Center" 
                 Text="Пароль"
-                       FontSize="15"
-                        FontFamily="Comic Sans MS"/>
+                       FontSize="15" />
             <TextBox Width="170"
                      MaxLength="20"
                      Margin="10"
                      Tag="Введите логин"
-                      FontFamily="Comic Sans MS"
+           
                      Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"/>
 
             <Button Content="Войти"
                     Width="120"
                     Margin="10"
-                     FontFamily="Comic Sans MS"
-                    Background="#148298"
-                    Command="{Binding AuthorizationButton,UpdateSourceTrigger=PropertyChanged}"/>
+                    FontSize="15"
+                    Background="{StaticResource BackgroundVeryDark2}"
+                    Command="{Binding AuthorizationButton,UpdateSourceTrigger=PropertyChanged}" Height="28"/>
 
             <Button Content="Регистрация"
-                    Background="#148298"
-                    Width="80"
-                     FontFamily="Comic Sans MS"
+                    Background="{StaticResource BackgroundVeryDark2}"
+                    Width="104"
+                    FontSize="15"
                     Margin="10"
                     Command="{Binding RegistrationButton,UpdateSourceTrigger=PropertyChanged}"/>
 
