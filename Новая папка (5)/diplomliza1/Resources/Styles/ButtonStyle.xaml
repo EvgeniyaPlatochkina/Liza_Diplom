@@ -75,7 +75,7 @@
         </Style.Triggers>
     </Style>
 
-    <ImageBrush x:Key="EmployeesButtonImage"
+    <!--<ImageBrush x:Key="EmployeesButtonImage"
                 ImageSource="C:\Users\Александр\Desktop\Liza_Diplom\Новая папка (5)\diplomliza1\Resources\Styles\Picture\Button\employees.png"
                 Stretch="Uniform"/>
 
@@ -176,6 +176,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
 
 </ResourceDictionary>
