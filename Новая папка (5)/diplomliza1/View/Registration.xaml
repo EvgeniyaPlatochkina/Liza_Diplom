@@ -8,14 +8,14 @@
           Icon="{StaticResource Icon}"
              FontFamily="Cascadia Mono SemiBold"
                 WindowStartupLocation="CenterScreen"
-        Title="Регистрация" Height="450" Width="300" 
+        Title="Регистрация" Height="415" Width="300" 
         Background="{StaticResource BackgroundDark}"
        >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="288*"/>
-            <RowDefinition Height="89*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="241*"/>
+            <RowDefinition Height="142*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0"
                    Text="Регистрация"
@@ -25,43 +25,46 @@
         <StackPanel Margin="0,57,0,1" Grid.RowSpan="2">
             <TextBlock HorizontalAlignment="Center" 
                 Text="Фамилия"/>
-            <TextBox Width="170"
+            <TextBox Width="173"
                      MaxLength="20"
-                     Margin="10"
-                     Tag="Введите логин"
+                  
+                     Tag="Введите фамилию"
+                     Style="{StaticResource TextBox1}"
                      Text="{Binding LastName,UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock HorizontalAlignment="Center" 
                 Text="Имя"/>
             <TextBox Width="170"
                      MaxLength="20"
-                     Margin="10"
-                     Tag="Введите логин"
+                    Style="{StaticResource TextBox1}"
+                     Tag="Введите имя"
                      Text="{Binding FirstName,UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock HorizontalAlignment="Center" 
                 Text="Логин"/>
             <TextBox Width="170"
                      MaxLength="20"
-                     Margin="10"
+                     Style="{StaticResource TextBox1}"
                      Tag="Введите логин"
                      Text="{Binding Login,UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock HorizontalAlignment="Center" 
                 Text="Пароль"/>
             <TextBox Width="170"
                      MaxLength="20"
-                     Margin="10"
-                     Tag="Введите логин"
+                  Style="{StaticResource TextBox1}"
+                     Tag="Введите пароль"
                      Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="15">
+        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="15,15,15,15">
             <Button 
-                Content="Сохранить" 
+                Content="Сохранить"
+                Style="{StaticResource ButtonStyle5}"
                 Command="{Binding Registrationbutton,UpdateSourceTrigger=PropertyChanged}"
                 Background="{StaticResource BackgroundVeryDark2}"
-                Margin=" 0 0 0 10" Height="23"/>
+                Margin=" 0 0 0 10" Height="30" Width="208"/>
             <Button 
                 Content="Авторизация" 
+                Style="{StaticResource ButtonStyle5}"
                  Background="{StaticResource BackgroundVeryDark2}"
-                Command="{Binding ExitButton,UpdateSourceTrigger=PropertyChanged}" Height="23"/>
+                Command="{Binding ExitButton, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="154"/>
         </StackPanel>
 
     </Grid>

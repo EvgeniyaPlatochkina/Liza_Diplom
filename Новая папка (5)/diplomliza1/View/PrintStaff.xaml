@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
 
-        <Button Click="Button_Click" Content="Печать" Grid.Row="1" Margin="590,3,10,3"  Background="{StaticResource BackgroundDark}"/>
+        <Button Click="Button_Click" Content="Печать" Grid.Row="1" Margin="590,3,10,3" Style="{StaticResource ButtonStyle6}"/>
         <Grid Grid.ColumnSpan="2" x:Name="Stac_print">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="231*"/>

@@ -59,10 +59,10 @@
                 <TextBlock Text="{Binding Questionnare.PersonalQualities}" TextWrapping="Wrap"/>
                 <TextBlock Text="Обо мне"/>
                 <TextBlock Text="{Binding Questionnare.AboutMe}" TextWrapping="Wrap"/>
-                <Button Command="{Binding OpenAcceptApplicantWindow,UpdateSourceTrigger=PropertyChanged}" Content="Назначить встречу" Margin="10" Height="40" Width="150" Background="{StaticResource BackgroundDark}" FontStyle="Italic"/>
+                <Button Command="{Binding OpenAcceptApplicantWindow,UpdateSourceTrigger=PropertyChanged}" Content="Назначить встречу" Margin="10" Height="40" Width="150" Style="{StaticResource ButtonStyle4}" FontStyle="Italic"/>
                 <Button Command="{Binding RejectQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Отклонить" Margin="10" Height="40" Width="150" 
                         FontWeight="Bold"
-                        Background="{StaticResource BackgroundDark}" FontStyle="Italic"/>
+                       Style="{StaticResource ButtonStyle4}" FontStyle="Italic"/>
             </StackPanel>
         </Grid>
     </Grid>

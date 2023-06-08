@@ -73,7 +73,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Оставить резюме" Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" Background="{StaticResource BackgroundVeryDark2}" Margin="10,3"/>
+            <Button Style="{StaticResource ButtonStyle5}" Content="Оставить резюме" Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" Background="{StaticResource BackgroundVeryDark2}" Margin="10,3"/>
         </Grid>
     </Grid>
 </UserControl>

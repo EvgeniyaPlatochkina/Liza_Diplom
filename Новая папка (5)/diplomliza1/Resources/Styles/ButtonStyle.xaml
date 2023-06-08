@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="ButtonStyle1" TargetType="Button">
-        <Setter Property="Foreground" Value="{StaticResource ButtonForegroundColor}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundColor2}"/>
         <Setter Property="FontFamily" Value="Lucida Console"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -74,7 +74,115 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
+    
+    <Style x:Key="ButtonStyle4" TargetType="Button">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundColor2}"/>
+        <Setter Property="FontFamily" Value="Lucida Console"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#739DA8"
+                            CornerRadius="8"
+                            Height="30"
+                            x:Name="Border">
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          x:Name="ContentPsnt"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#739DA8"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonColorPressed}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonStyle5" TargetType="Button">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundColor2}"/>
+        <Setter Property="FontFamily" Value="Lucida Console"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{StaticResource BackgroundVeryDark2}"
+                            CornerRadius="8"
+                            Height="30"
+                            x:Name="Border">
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          x:Name="ContentPsnt"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#739DA8"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonColorPressed}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonStyle6" TargetType="Button">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundColor2}"/>
+        <Setter Property="FontFamily" Value="Lucida Console"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#739DA8"
+                            CornerRadius="8"
+                            Height="20"
+                            x:Name="Border">
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          x:Name="ContentPsnt"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#739DA8"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonColorPressed}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonStyle7" TargetType="Button">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundColor2}"/>
+        <Setter Property="FontFamily" Value="Lucida Console"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#739DA8"
+                            CornerRadius="8"
+                            Height="30"
+                            x:Name="Border">
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          x:Name="ContentPsnt"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#739DA8"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonColorPressed}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <!--<ImageBrush x:Key="EmployeesButtonImage"
                 ImageSource="C:\Users\Александр\Desktop\Liza_Diplom\Новая папка (5)\diplomliza1\Resources\Styles\Picture\Button\employees.png"
                 Stretch="Uniform"/>

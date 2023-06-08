@@ -12,7 +12,7 @@
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Дата встречи" Width="99" HorizontalAlignment="Center" TextAlignment="Center"/>
             <DatePickerTextBox Text="{Binding DateOfMeeting, UpdateSourceTrigger=PropertyChanged}" Width="109" HorizontalAlignment="Center" TextAlignment="Center"/>
-            <Button Content="Назначить" Command="{Binding EditQuestionnareButton, UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="10" Background="#739DA8" FontStyle="Italic"/>
+            <Button Content="Назначить" Command="{Binding EditQuestionnareButton, UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="10" Style="{StaticResource ButtonStyle4}" FontStyle="Italic"/>
         </StackPanel>
 
     </Grid>

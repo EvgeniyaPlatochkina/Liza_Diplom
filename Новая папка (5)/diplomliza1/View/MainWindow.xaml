@@ -12,7 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="57"/>
             <RowDefinition/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="13.04"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Авторизация"
                    HorizontalAlignment="Center"
@@ -26,30 +26,33 @@
                 Text="Логин"
                        FontSize="15"
                         />
-            <TextBox Width="170"
+            <TextBox Width="182"
                      MaxLength="20"
-                     Margin="10"
+                   
+                     
+                     Style="{StaticResource TextBox1}"
                       Tag="Введите логин"
                      Text="{Binding Login,UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock HorizontalAlignment="Center" 
                 Text="Пароль"
-                       FontSize="15" />
-            <TextBox Width="170"
+                       FontSize="15" 
+                       Margin="0 5"/>
+            <TextBox Width="186"
                      MaxLength="20"
-                     Margin="10"
-                     Tag="Введите логин"
-           
+                    
+                     Tag="Введите пароль"
+                        Style="{StaticResource TextBox1}"
                      Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"/>
 
             <Button Content="Войти"
                     Width="120"
                     Margin="10"
                     FontSize="15"
-                    Background="{StaticResource BackgroundVeryDark2}"
-                    Command="{Binding AuthorizationButton,UpdateSourceTrigger=PropertyChanged}" Height="28"/>
+                    Style="{StaticResource ButtonStyle5}"
+                    Command="{Binding AuthorizationButton,UpdateSourceTrigger=PropertyChanged}" Height="35"/>
 
             <Button Content="Регистрация"
-                    Background="{StaticResource BackgroundVeryDark2}"
+                  Style="{StaticResource ButtonStyle5}"
                     Width="104"
                     FontSize="15"
                     Margin="10"

@@ -16,16 +16,17 @@
         <Grid Grid.Row="0">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="257*"/>
+                <ColumnDefinition Width="143*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Horizontal" Width="300">
+            <StackPanel Orientation="Horizontal" Margin="52,0,23,0">
                 <TextBlock Text="Поиск" Margin="10" FontSize="15" />
-                <TextBox Width="209"
+                <TextBox Width="344"
                          Height="30"
                          Margin="20,0,0,0"
-                         Tag="Введите текст для поиска программного продукта"
+                         Tag="Введите текст для поиска сотрудника"
+                         Style="{StaticResource TextBox1}"
                           Text="{Binding SearchStaff,UpdateSourceTrigger=PropertyChanged}"/>
 
 
@@ -116,23 +117,22 @@
                 <ColumnDefinition Width="267*"/>
             </Grid.ColumnDefinitions>
 
-            <Button
+            <Button Style="{StaticResource ButtonStyle7}"
 
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                     Content="Добавить"
                     Width="128"
-                    Height="30"
-                     Margin="10,3"
-                Background="{StaticResource BackgroundDark}"
+                   
+                  
+               
               
                     Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" />
             <Button Grid.Column="1"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                   Width="128"
-                    Height="30"
-                     Margin="10,3"
+                  Style="{StaticResource ButtonStyle7}"
                     Background="{StaticResource BackgroundDark}"
                      Content="Изменить"
                     Command="{Binding OpenEditManagerWindow,UpdateSourceTrigger=PropertyChanged}"  />
@@ -141,8 +141,7 @@
                             VerticalAlignment="Center"
                      Content="Удалить"
                     Width="128"
-                    Height="30"
-                     Margin="10,3"
+              Style="{StaticResource ButtonStyle7}"
                     Background="{StaticResource BackgroundDark}"
                     Command="{Binding DeleteStaffButton,UpdateSourceTrigger=PropertyChanged}"  />
 
@@ -151,8 +150,7 @@
                             VerticalAlignment="Center"
                      Content="Печать"
                     Width="128"
-                    Height="30"
-                     Margin="10,3"
+                   Style="{StaticResource ButtonStyle7}"
                     Background="{StaticResource BackgroundDark}"
                     Command="{Binding OpenPrintStaffButton,UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Grid.Column="1"

@@ -93,7 +93,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Посмотреть Информацию" Command="{Binding QuestionnarieApplicantPageButton,UpdateSourceTrigger=PropertyChanged}" Margin="10,3" Background="{StaticResource BackgroundVeryDark2}"/>
+            <Button Style="{StaticResource ButtonStyle5}" Grid.Column="0" Content="Посмотреть Информацию" Command="{Binding QuestionnarieApplicantPageButton,UpdateSourceTrigger=PropertyChanged}" Margin="10,3" Background="{StaticResource BackgroundVeryDark2}"/>
         </Grid>
     </Grid>
 </UserControl>

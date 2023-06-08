@@ -9,6 +9,13 @@
                 <ResourceDictionary Source="/Resources/Styles/Colors.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/ButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/Icons.xaml"/>
+              
+     
+     
+                <ResourceDictionary Source="/Resources/Styles/ComboBoxStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/TabControlStyle.xaml"/>
+
                 <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />

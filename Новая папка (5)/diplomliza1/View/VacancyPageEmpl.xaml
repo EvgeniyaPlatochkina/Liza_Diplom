@@ -17,22 +17,23 @@
         <Grid Grid.Row="0">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="16*"/>
+                <ColumnDefinition Width="9*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Horizontal" Width="300">
+            <StackPanel Orientation="Horizontal" Margin="52,0,27,0">
                 <TextBlock Text="Поиск" Margin="10" FontSize="15" />
 
-                <TextBox Width="209"
+                <TextBox Width="328"
                          Height="30"
                          Margin="20,0,0,0"
-                                 Tag="Введите текст для поиска программного продукта"
+                                 Tag="Введите текст для поиска Вакансии"
+                         Style="{StaticResource TextBox1}"
                         Text="{Binding SearchJobTitleValue,UpdateSourceTrigger=PropertyChanged}"/>
 
             </StackPanel>
 
-           
+
 
         </Grid>
 
@@ -63,7 +64,7 @@
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="12"/>
                                         </Grid.ColumnDefinitions>
-                                 
+
                                         <StackPanel Grid.Column="1"
                                                     Margin="5">
                                             <TextBlock Text="{Binding Title, StringFormat=Название: {0},UpdateSourceTrigger=PropertyChanged}"
@@ -73,16 +74,16 @@
                                             <TextBlock Text="{Binding Earnings, StringFormat=Заработная_плата: {0},UpdateSourceTrigger=PropertyChanged}"
                                                    />
                                         </StackPanel>
-                                    
+
                                     </Grid>
 
                                 </Border>
                                 <ControlTemplate.Triggers>
-                                    
+
                                     <Trigger Property="IsSelected" Value="True">
                                         <Setter TargetName="Border" Property="BorderThickness" Value="2"/>
                                     </Trigger>
-                                 
+
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Setter.Value>
@@ -105,6 +106,7 @@
                             VerticalAlignment="Center"
                     Width="200"
                     Height="30"
+                    Style="{StaticResource ButtonStyle5}"
                     Content="Добавить"
               Background="{StaticResource BackgroundVeryDark2}"
                     Command="{Binding OpenAddManagerWindow,UpdateSourceTrigger=PropertyChanged}" />
@@ -114,6 +116,7 @@
                             Margin="5,0"
                             VerticalAlignment="Center"
                      Content="Изменить"
+                    Style="{StaticResource ButtonStyle5}"
                     Width="200"
                     Height="30"
           
@@ -123,6 +126,7 @@
                             HorizontalAlignment="Left"
                             Margin="5,0"
                             VerticalAlignment="Center"
+                    Style="{StaticResource ButtonStyle5}"
                      Content="Удалить"
                     Width="200"
                     Height="30"

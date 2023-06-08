@@ -7,7 +7,7 @@
         mc:Ignorable="d"
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
-        Title="Изменение резюме" Height="480" Width="800"
+        Title="Изменение резюме" Height="530" Width="800"
          Background="{StaticResource BackgroundLight}"
         FontFamily="Cascadia Mono SemiBold">
     <Grid>
@@ -22,16 +22,16 @@
 
                     <StackPanel Grid.Column="0" Margin="10,10,10,10" Grid.ColumnSpan="2">
                         <TextBlock Text="Имя"/>
-                        <TextBox Text="{Binding FirstName,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Style="{StaticResource TextBox3}" Text="{Binding FirstName,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Фамилия"/>
-                        <TextBox Text="{Binding LastName,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Style="{StaticResource TextBox3}" Text="{Binding LastName,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Отчество"/>
-                        <TextBox Text="{Binding MiddleName,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Style="{StaticResource TextBox3}" Text="{Binding MiddleName,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Дата рождения"/>
                         <DatePicker  SelectedDate="{Binding DateOfBirth,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Фото"/>
                         <ComboBox ItemsSource="{Binding Photo,UpdateSourceTrigger=PropertyChanged}" Background="#CABAAA"
-                        SelectedItem="{Binding SelectedPhoto,UpdateSourceTrigger=PropertyChanged}" >
+                        SelectedItem="{Binding SelectedPhoto,UpdateSourceTrigger=PropertyChanged}" Width="374" >
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
@@ -41,22 +41,22 @@
                             </ComboBox.ItemTemplate>
                         </ComboBox>
                         <TextBlock Text="Email"/>
-                        <TextBox Text="{Binding Email,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Style="{StaticResource TextBox3}" Text="{Binding Email,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Номер телефона"/>
-                        <TextBox Text="{Binding Phone,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Style="{StaticResource TextBox3}" Text="{Binding Phone,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Прошлое место работы"/>
                         <ComboBox ItemsSource="{Binding WorkExperiences,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedWorkExperience,UpdateSourceTrigger=PropertyChanged}"
                                   DisplayMemberPath="FullWorkExperience"
-                            IsEditable="True"/>
+                            IsEditable="True" Width="372"/>
                         <TextBlock Text="Cемейное положение"/>
                         <ComboBox ItemsSource="{Binding FamilyStatuse,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedFamilyStatuse,UpdateSourceTrigger=PropertyChanged}"
-                           DisplayMemberPath="Title"/>
+                           DisplayMemberPath="Title" Width="370"/>
                         <TextBlock Text="Военная обязанность"/>
                         <ComboBox ItemsSource="{Binding MilitryDutys,UpdateSourceTrigger=PropertyChanged}"                       
                                    SelectedItem="{Binding SelectedMilitryDutys,UpdateSourceTrigger=PropertyChanged}"
-                           DisplayMemberPath="Title"/>
+                           DisplayMemberPath="Title" Width="370"/>
 
                     </StackPanel>
                     <StackPanel Grid.Column="2" Margin="10,10,10,10">
@@ -64,22 +64,22 @@
                         <TextBlock Text="Пол"/>
                         <ComboBox ItemsSource="{Binding Genders,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedGenders,UpdateSourceTrigger=PropertyChanged}"
-                           DisplayMemberPath="Title"/>
+                           DisplayMemberPath="Title" Width="370"/>
                       
                         <TextBlock Text="Место обучения"/>
                         <ComboBox ItemsSource="{Binding PlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
                                         IsEditable="True"
                               SelectedItem="{Binding SelectedPlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
-                           DisplayMemberPath="Title"/>
+                           DisplayMemberPath="Title" Width="368"/>
                         <TextBlock Text="Рекомендации"/>
-                        <TextBox Height="25" Text="{Binding Recommendations,UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox Style="{StaticResource TextBox3}" Height="25" Text="{Binding Recommendations,UpdateSourceTrigger=PropertyChanged}" />
                         <TextBlock Text="Навыки"/>
-                        <TextBox Height="27" Text="{Binding Skills,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
+                        <TextBox Style="{StaticResource TextBox3}" Height="27" Text="{Binding Skills,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                         <TextBlock Text="Личные качества"/>
-                        <TextBox Height="34" Text="{Binding PersonalQualities,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
+                        <TextBox Style="{StaticResource TextBox3}" Height="34" Text="{Binding PersonalQualities,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                         <TextBlock Text="Обо мне"/>
-                        <TextBox Height="52" Text="{Binding AboutMe,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
-                        <Button Command="{Binding EditQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Сохранить" Margin="10" Height="40" Width="150"
+                        <TextBox Style="{StaticResource TextBox3}" Height="52" Text="{Binding AboutMe,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
+                        <Button Style="{StaticResource ButtonStyle5}" Command="{Binding EditQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Сохранить" Margin="10" Height="40" Width="150"
                                  Background="{StaticResource BackgroundVeryDark2}"/>
                     </StackPanel>
                 </Grid>
@@ -88,14 +88,14 @@
                 <StackPanel Margin="10">
 
                     <TextBlock Text="Название учебного учереждения"/>
-                    <TextBox Text="{Binding PlacyOfStydeTitle,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource TextBox3}" Text="{Binding PlacyOfStydeTitle,UpdateSourceTrigger=PropertyChanged}" Width="771"/>
                     <TextBlock Text="Специальность"/>
-                    <TextBox Text="{Binding Speciality,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource TextBox3}" Text="{Binding Speciality,UpdateSourceTrigger=PropertyChanged}" Width="770"/>
                     <TextBlock Text="Полученное образование"/>
                     <ComboBox ItemsSource="{Binding Educations,UpdateSourceTrigger=PropertyChanged}"
                               SelectedItem="{Binding SelectedEducation,UpdateSourceTrigger=PropertyChanged}"
-                            DisplayMemberPath="Title"/>
-                    <Button Content="Save" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="200" Height="40" Width="150"
+                            DisplayMemberPath="Title" Width="770"/>
+                    <Button Style="{StaticResource ButtonStyle5}"  Content="Сохранить" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="200" Height="40" Width="150"
                              Background="{StaticResource BackgroundVeryDark2}"/>
                 </StackPanel>
 
@@ -104,10 +104,10 @@
                 <StackPanel Margin="10">
 
                     <TextBlock Text="Место работы"/>
-                    <TextBox Text="{Binding SpaseOfWork,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource TextBox3}" Text="{Binding SpaseOfWork,UpdateSourceTrigger=PropertyChanged}" Width="771"/>
                     <TextBlock Text="Отработанное время"/>
-                    <TextBox Text="{Binding HoursWorked,UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Content="Сохранить" Command="{Binding AddWorkExpirienceButton, UpdateSourceTrigger=PropertyChanged}" Margin="240" Height="40" Width="150"
+                    <TextBox Style="{StaticResource TextBox3}" Text="{Binding HoursWorked,UpdateSourceTrigger=PropertyChanged}" Width="773"/>
+                    <Button Style="{StaticResource ButtonStyle5}" Content="Сохранить" Command="{Binding AddWorkExpirienceButton, UpdateSourceTrigger=PropertyChanged}" Margin="240" Height="40" Width="150"
                              Background="{StaticResource BackgroundVeryDark2}"/>
                 </StackPanel>
 

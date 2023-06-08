@@ -22,6 +22,7 @@
 
             <Button Height="50"
                     Content="Резюме"
+                    
                     Command="{Binding QuestionnarePageButton}"
                       Background="{StaticResource BackgroundVeryDark2}"
                    />
