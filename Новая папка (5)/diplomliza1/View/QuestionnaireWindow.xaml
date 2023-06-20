@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
           Icon="{StaticResource Icon}"
+        
         WindowStartupLocation="CenterScreen"
         Title="Создание резюме" Height="532" Width="800"  FontFamily="Cascadia Mono SemiBold"
         Background="{StaticResource BackgroundLight}"
@@ -75,7 +76,7 @@
                         <TextBlock Text="Навыки"/>
                         <TextBox Style="{StaticResource TextBox3}" Height="33" TextWrapping="Wrap" Text="{Binding Skills,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Личные качества"/>
-                        <TextBox Style="{StaticResource TextBox3}" Height="34" Text="{Binding PersonalQualities,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
+                        <TextBox Foreground="Black" Height="34" Text="{Binding PersonalQualities,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                         <TextBlock Text="Обо мне"/>
                         <TextBox Style="{StaticResource TextBox3}" Height="52" Text="{Binding AboutMe,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                         <Button Style="{StaticResource ButtonStyle5}" Command="{Binding AddQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Сохранить" Margin="10" Height="40" Width="150"
