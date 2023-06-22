@@ -14,7 +14,7 @@
             <TextBlock Text="Название" Margin="10,10,10,0"/>
             <TextBox Style="{StaticResource TextBox3}" Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Width="428"/>
             <TextBlock Text="Заработная плата" Margin="10,10,10,0"/>
-            <TextBox Style="{StaticResource TextBox3}" Text="{Binding Earnings,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Width="414"/>
+            <TextBox MaxLength="11" Style="{StaticResource TextBox3}" Text="{Binding Earnings,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Width="414"/>
             <TextBlock Text="Описание" Margin="10,10,10,0"/>
             <TextBox Style="{StaticResource TextBox3}" Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Height="85" TextWrapping="Wrap" Width="419"/>
             <Button Style="{StaticResource ButtonStyle4}" x:Name="ActionButton" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="40" Width="150" Content="Добавить" Background="{StaticResource BackgroundDark}"/>

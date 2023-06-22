@@ -44,7 +44,8 @@
                     <TextBlock Text="Email"/>
                         <TextBox Style="{StaticResource TextBox4}" Text="{Binding Email,UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock Text="Номер телефона"/>
-                        <TextBox Style="{StaticResource TextBox4}" Text="{Binding Phone,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Style="{StaticResource TextBox4}" Text="{Binding Phone,UpdateSourceTrigger=PropertyChanged}"
+                                 MaxLength="11"/>
 
                     <TextBlock Text="Дата поступления на работу"/>
                     <DatePicker SelectedDate="{Binding EnrollmentDate,UpdateSourceTrigger=PropertyChanged}"/>
@@ -108,9 +109,10 @@
                 <Grid Margin="10">
                 <StackPanel>
                         <TextBlock Text="Серия" Margin="10,10,10,0"/>
-                        <TextBox Style="{StaticResource TextBox5}" Text="{Binding Series,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Width="834"/>
+                        <TextBox Style="{StaticResource TextBox5}" Text="{Binding Series,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Width="834"
+                                 MaxLength="4"/>
                         <TextBlock Text="Номер" Margin="10,10,10,0"/>
-                        <TextBox Style="{StaticResource TextBox5}" Text="{Binding Number,UpdateSourceTrigger=PropertyChanged}"  Margin="10,0,10,0"/>
+                        <TextBox MaxLength="6" Style="{StaticResource TextBox5}" Text="{Binding Number,UpdateSourceTrigger=PropertyChanged}"  Margin="10,0,10,0"/>
                         <TextBlock Text="Кем выдан" Margin="10,10,10,0"/>
                         <TextBox Style="{StaticResource TextBox5}" Text="{Binding IssuedBy,UpdateSourceTrigger=PropertyChanged}"  Margin="10,0,10,0"/>
                         <TextBlock Text="Дата выдачи" Margin="10,10,10,0"/>
@@ -163,14 +165,14 @@
                 <StackPanel>
 
                     <TextBlock Text="Номер ИНН"  Margin="10,10,10,0"/>
-                    <TextBox Style="{StaticResource TextBox5}" Text="{Binding TitleINN,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
+                    <TextBox MaxLength="11" Style="{StaticResource TextBox5}" Text="{Binding TitleINN,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
                     <Button Style="{StaticResource ButtonStyle4}" Content="Добавить" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Номер СНИЛС">
                 <StackPanel>
                     <TextBlock Text="CНИЛС" Margin="10,10,10,0"/>
-                    <TextBox Style="{StaticResource TextBox5}" Text="{Binding SnilsTile,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
+                    <TextBox MaxLength="11" Style="{StaticResource TextBox5}" Text="{Binding SnilsTile,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
                     <Button Style="{StaticResource ButtonStyle4}" Content="Добавить" Command="{Binding AddSnilsButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
              

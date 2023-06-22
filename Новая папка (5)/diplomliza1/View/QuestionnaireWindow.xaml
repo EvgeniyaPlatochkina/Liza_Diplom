@@ -44,7 +44,8 @@
                         <TextBlock Text="Email"/>
                         <TextBox Style="{StaticResource TextBox3}" Text="{Binding Email,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Номер телефона"/>
-                        <TextBox Style="{StaticResource TextBox3}" Text="{Binding Phone,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Style="{StaticResource TextBox3}" Text="{Binding Phone,UpdateSourceTrigger=PropertyChanged}"
+                                 MaxLength="11"/>
                         <TextBlock Text="Прошлое место работы"/>
                         <ComboBox ItemsSource="{Binding WorkExperiences,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedWorkExperience,UpdateSourceTrigger=PropertyChanged}"
@@ -106,7 +107,8 @@
                     <TextBlock Text="Место работы"/>
                     <TextBox Style="{StaticResource TextBox3}" Text="{Binding SpaseOfWork,UpdateSourceTrigger=PropertyChanged}" Width="772"/>
                     <TextBlock Text="Отработанное время"/>
-                    <TextBox Style="{StaticResource TextBox3}" Text="{Binding HoursWorked,UpdateSourceTrigger=PropertyChanged}" Width="772"/>
+                    <TextBox Style="{StaticResource TextBox3}" Text="{Binding HoursWorked,UpdateSourceTrigger=PropertyChanged}" Width="772"
+                           MaxLength="10" />
                     <Button Style="{StaticResource ButtonStyle5}" Content="Сохранить" Command="{Binding AddWorkExpirienceButton, UpdateSourceTrigger=PropertyChanged}" Margin="240" Height="40" Width="150" 
                                 Background="{StaticResource BackgroundVeryDark2}"/>
                 </StackPanel>
