@@ -81,7 +81,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#739DA8"
+                    <Border Background="#64A8D1"
                             CornerRadius="8"
                             Height="30"
                             x:Name="Border">
@@ -92,7 +92,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="#739DA8"/>
+                            <Setter TargetName="Border" Property="Background" Value="#03436A"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonColorPressed}"/>
@@ -119,7 +119,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="#739DA8"/>
+                            <Setter TargetName="Border" Property="Background" Value="#03436A"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonColorPressed}"/>
@@ -162,7 +162,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#739DA8"
+                    <Border Background="#6A94D4"
                             CornerRadius="8"
                             Height="30"
                             x:Name="Border">
@@ -173,7 +173,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="#739DA8"/>
+                            <Setter TargetName="Border" Property="Background" Value="#03436A"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonColorPressed}"/>

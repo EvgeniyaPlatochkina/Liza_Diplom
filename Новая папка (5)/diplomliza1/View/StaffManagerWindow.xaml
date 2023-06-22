@@ -7,7 +7,8 @@
         mc:Ignorable="d"
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
-        Title="Добавление сотрудника" Height="546" Width="881"       FontFamily="Cascadia Mono SemiBold">
+         ResizeMode="NoResize"
+        Title="Добавление сотрудника" Height="576" Width="881"       FontFamily="Cascadia Mono SemiBold">
 
     <Grid Background="{StaticResource BackgroundLight}">
        
@@ -52,7 +53,7 @@
 
                     <TextBlock Text="Серия паспорта"/>
                     <ComboBox ItemsSource="{Binding Passports,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                            
                               SelectedItem="{Binding SelectedPassports,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="FullPassport" Width="412"/>
 
@@ -63,33 +64,33 @@
                     <StackPanel Grid.Column="1" Margin="10">
                         <TextBlock Text="Улица"/>
                         <ComboBox ItemsSource="{Binding Address,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                         
                               SelectedItem="{Binding SelectedAddress,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="FullAdress" Width="408"/>
                         <TextBlock Text="СНИЛС"/>
                         <ComboBox ItemsSource="{Binding SNILs,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                          
                               SelectedItem="{Binding SekectedSNILS,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title" Width="406"/>
                         <TextBlock Text="ИНН"/>
                         <ComboBox ItemsSource="{Binding INNS,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                          
                               SelectedItem="{Binding SelectedINNS,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title" Width="410"/>
 
                         <TextBlock Text="Семейное положение"/>
                         <ComboBox ItemsSource="{Binding FamilyStatuse, UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                       
                               SelectedItem="{Binding SelectedFamilyStatuse, UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title" Width="408"/>
                         <TextBlock Text="Военная обязанность"/>
                         <ComboBox ItemsSource="{Binding MilitryDutys,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                           
                               SelectedItem="{Binding SelectedMilitryDutys,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title" Width="408"/>
                         <TextBlock Text="Пол"/>
                         <ComboBox ItemsSource="{Binding Genders,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                          
                               SelectedItem="{Binding SelectedGenders,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title" Width="412"/>
                         <TextBlock Text="Должность"/>
@@ -98,7 +99,7 @@
                               SelectedItem="{Binding SelectedJobTitle,UpdateSourceTrigger=PropertyChanged}" Width="408"/>
                         <TextBlock Text="Место обучения"/>
                         <ComboBox ItemsSource="{Binding PlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
-                            IsEditable="True"
+                          
                               SelectedItem="{Binding SelectedPlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="FullPlaceOfStudy" Width="408"/>
                         <Button Style="{StaticResource ButtonStyle4}" x:Name="ActionButton" Content="Сохранить" Command="{Binding AddStaffButton,UpdateSourceTrigger=PropertyChanged}" Margin="10" Height="40" Width="100" Background="{StaticResource BackgroundDark}"/>
@@ -123,7 +124,7 @@
                 </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Добавить адрес">
+            <TabItem Header="Добавить адрес" HorizontalAlignment="Left" Width="159">
                 <Grid Margin="10">
                 <StackPanel>
                         <TextBlock Text="Область" Margin="10,10,10,0"/>

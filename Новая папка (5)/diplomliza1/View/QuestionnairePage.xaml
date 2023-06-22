@@ -27,7 +27,7 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ListViewItem">
                                 <Border  Background="White"
-                                        BorderBrush="Orange"
+                                        BorderBrush="Black"
                                         BorderThickness="1"
                                         CornerRadius="10"
                                         Margin="10"

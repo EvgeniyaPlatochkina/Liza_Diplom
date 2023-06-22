@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Icon="{StaticResource Icon}"
-        Title="Главное окно" Height="480" Width="850"
+        Title="Главное окно" Height="800" Width="1300"
         Background="{StaticResource BackgroundLight}"
          FontFamily="Cascadia Mono SemiBold">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="80"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
        
@@ -22,7 +22,7 @@
 
             <Button Height="50"
                     Content="Резюме"
-                    
+                    BorderBrush="Transparent"
                     Command="{Binding QuestionnarePageButton}"
                       Background="{StaticResource BackgroundVeryDark2}"
                    />
@@ -30,18 +30,21 @@
 
             <Button Height="50"
                     Content="Вакансия"
+                      BorderBrush="Transparent"
                     Command="{Binding JobVacancyPageButton}"
                        Background="{StaticResource BackgroundVeryDark2}"
                     />
             <Button Height="50"
                     Content="О компании"
+                      BorderBrush="Transparent"
                     Command="{Binding InfomationWorkPageButton}"
                        Background="{StaticResource BackgroundVeryDark2}"
                     />
             
-            <Button Height="50" Margin="0 200"
+            <Button Height="50" Margin="0 450"
                     Content="Выйти"
                    Click="Button_Click"
+                      BorderBrush="Transparent"
                         Background="{StaticResource BackgroundVeryDark2}"/>
 
 

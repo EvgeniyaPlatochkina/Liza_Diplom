@@ -2,12 +2,23 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!--#region Window Backgrounds-->
-    <SolidColorBrush x:Key="BackgroundLight" Color="#EDD5D1"/>
+    
+    <!--<SolidColorBrush x:Key="BackgroundLight" Color="#EDD5D1"/>
     <SolidColorBrush x:Key="BackgroundDark" Color="#739DA8"/>
     <SolidColorBrush x:Key="BackgroundVeryDark" Color="#7D646A"/>
     <SolidColorBrush x:Key="BackgroundVeryDark1" Color="#C78376"/>
     <SolidColorBrush x:Key="BackgroundVeryDark2" Color="#505B55"/>
+    <SolidColorBrush x:Key="BackgroundWhite" Color="White"/>-->
+    
+    
+    <SolidColorBrush x:Key="BackgroundLight" Color="#FFA500"/>
+    <SolidColorBrush x:Key="BackgroundDark" Color="#739DA8"/>
+    <SolidColorBrush x:Key="BackgroundVeryDark" Color="#7D646A"/>
+    <SolidColorBrush x:Key="BackgroundVeryDark1" Color="#C78376"/>
+    <SolidColorBrush x:Key="BackgroundVeryDark2" Color="#6A94D4"/>
     <SolidColorBrush x:Key="BackgroundWhite" Color="White"/>
+    <SolidColorBrush x:Key="Backgroundregautho" Color="#0969A2"/>
+    
     <!--#endregion-->
     <!--#region Foregrounds-->
     <SolidColorBrush x:Key="ForegroundColor1" Color="White"/>

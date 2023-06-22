@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplomliza1.View"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
-        Title="Авторизация" Height="400" Width="300" FontFamily="Cascadia Mono SemiBold">
-    <Grid Background="{StaticResource BackgroundDark}">
+        Title="Авторизация" Height="430" Width="300" FontFamily="Cascadia Mono SemiBold">
+    <Grid Background="{StaticResource Backgroundregautho}">
         <Grid.RowDefinitions>
             <RowDefinition Height="57"/>
             <RowDefinition/>
@@ -18,7 +19,7 @@
                    HorizontalAlignment="Center"
                    FontSize="25"
                    Margin="0,8,0,0" Width="166"/>
-        <Image Source="{StaticResource Logo}" Margin="103,56,103,202" Grid.RowSpan="2"/>
+        <Image Source="{StaticResource Logo}" Margin="103,56,103,236" Grid.RowSpan="2"/>
 
         <StackPanel VerticalAlignment="Top"
                                 Grid.Row="1" Height="231" Margin="0,110,0,0" Grid.RowSpan="2">

@@ -13,10 +13,10 @@
             <RowDefinition />
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <ComboBox Grid.Row="0" Margin="134,0,400,0"
+        <ComboBox Grid.Row="0" Margin="0,5,0,5"
                   ItemsSource="{Binding ProductFilthersTtile,UpdateSourceTrigger=PropertyChanged}"
-                  SelectedItem="{Binding SelectedProductFiltherTitle,UpdateSourceTrigger=PropertyChanged}"/>
-      
+                  SelectedItem="{Binding SelectedProductFiltherTitle,UpdateSourceTrigger=PropertyChanged}" Width="353"/>
+
         <ListView Grid.Row="1"
                           ItemsSource="{Binding Questionnares,UpdateSourceTrigger=PropertyChanged}"
                           SelectedItem="{Binding SelectedQuestionnares,UpdateSourceTrigger=PropertyChanged}"
@@ -31,7 +31,7 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ListViewItem">
                                 <Border  Background="White"
-                                        BorderBrush="Orange"
+                                        BorderBrush="Black"
                                         BorderThickness="1"
                                         CornerRadius="10"
                                         Margin="10"
@@ -46,7 +46,7 @@
                                             <ColumnDefinition Width="12"/>
 
                                         </Grid.ColumnDefinitions>
-                                      
+
                                         <Image   Source="{Binding Photo, UpdateSourceTrigger=PropertyChanged}"
                                             Height="100"
                                                Width="100"
@@ -70,7 +70,7 @@
 
                                         </StackPanel>
                                         <TextBlock  Grid.Column="3" VerticalAlignment="Center" Text="{Binding Status,UpdateSourceTrigger=PropertyChanged}"/>
-                                       
+
                                     </Grid>
 
                                 </Border>

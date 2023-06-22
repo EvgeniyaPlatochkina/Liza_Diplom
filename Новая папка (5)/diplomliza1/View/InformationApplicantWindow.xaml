@@ -7,7 +7,7 @@
         mc:Ignorable="d"
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
-        Title="Информация о соискателе" Height="480" Width="800"
+        Title="Информация о соискателе" Height="580" Width="850"
         Background="{StaticResource BackgroundLight}"
         FontFamily="Cascadia Mono SemiBold">
     <Grid>

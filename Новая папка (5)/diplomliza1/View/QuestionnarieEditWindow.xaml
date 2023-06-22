@@ -7,7 +7,8 @@
         mc:Ignorable="d"
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
-        Title="Изменение резюме" Height="530" Width="800"
+         ResizeMode="NoResize"
+        Title="Изменение резюме" Height="580" Width="850"
          Background="{StaticResource BackgroundLight}"
         FontFamily="Cascadia Mono SemiBold">
     <Grid>
@@ -30,7 +31,7 @@
                         <TextBlock Text="Дата рождения"/>
                         <DatePicker  SelectedDate="{Binding DateOfBirth,UpdateSourceTrigger=PropertyChanged}"/>
                         <TextBlock Text="Фото"/>
-                        <ComboBox ItemsSource="{Binding Photo,UpdateSourceTrigger=PropertyChanged}" Background="#CABAAA"
+                        <ComboBox  Margin=" 0 0 20 0" ItemsSource="{Binding Photo,UpdateSourceTrigger=PropertyChanged}" Background="#CABAAA"
                         SelectedItem="{Binding SelectedPhoto,UpdateSourceTrigger=PropertyChanged}" Width="374" >
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
@@ -49,27 +50,30 @@
                         <ComboBox ItemsSource="{Binding WorkExperiences,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedWorkExperience,UpdateSourceTrigger=PropertyChanged}"
                                   DisplayMemberPath="FullWorkExperience"
-                            IsEditable="True" Width="372"/>
+                                  Margin=" 0 0 20 0"
+                             Width="372"/>
                         <TextBlock Text="Cемейное положение"/>
                         <ComboBox ItemsSource="{Binding FamilyStatuse,UpdateSourceTrigger=PropertyChanged}"
                                   SelectedItem="{Binding SelectedFamilyStatuse,UpdateSourceTrigger=PropertyChanged}"
-                           DisplayMemberPath="Title" Width="370"/>
+                           DisplayMemberPath="Title" Width="370"
+                                  Margin=" 0 0 20 0"/>
                         <TextBlock Text="Военная обязанность"/>
                         <ComboBox ItemsSource="{Binding MilitryDutys,UpdateSourceTrigger=PropertyChanged}"                       
                                    SelectedItem="{Binding SelectedMilitryDutys,UpdateSourceTrigger=PropertyChanged}"
+                                  Margin=" 0 0 20 0"
                            DisplayMemberPath="Title" Width="370"/>
 
                     </StackPanel>
                     <StackPanel Grid.Column="2" Margin="10,10,10,10">
 
                         <TextBlock Text="Пол"/>
-                        <ComboBox ItemsSource="{Binding Genders,UpdateSourceTrigger=PropertyChanged}"
+                        <ComboBox ItemsSource="{Binding Genders,UpdateSourceTrigger=PropertyChanged}" Margin=" 0 0 20 0"
                                   SelectedItem="{Binding SelectedGenders,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title" Width="370"/>
                       
                         <TextBlock Text="Место обучения"/>
                         <ComboBox ItemsSource="{Binding PlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
-                                        IsEditable="True"
+                                   Margin=" 0 0 20 0"    
                               SelectedItem="{Binding SelectedPlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="Title" Width="368"/>
                         <TextBlock Text="Рекомендации"/>
@@ -94,6 +98,7 @@
                     <TextBox Style="{StaticResource TextBox3}" Text="{Binding Speciality,UpdateSourceTrigger=PropertyChanged}" Width="770"/>
                     <TextBlock Text="Полученное образование"/>
                     <ComboBox ItemsSource="{Binding Educations,UpdateSourceTrigger=PropertyChanged}"
+                              Margin=" 0 0 49 0"
                               SelectedItem="{Binding SelectedEducation,UpdateSourceTrigger=PropertyChanged}"
                             DisplayMemberPath="Title" Width="770"/>
                     <Button Style="{StaticResource ButtonStyle5}"  Content="Сохранить" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="200" Height="40" Width="150"

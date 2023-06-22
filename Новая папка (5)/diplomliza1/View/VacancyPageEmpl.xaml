@@ -17,14 +17,14 @@
         <Grid Grid.Row="0">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="16*"/>
-                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="127*"/>
+                <ColumnDefinition Width="33*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Orientation="Horizontal" Margin="52,0,27,0">
                 <TextBlock Text="Поиск" Margin="10" FontSize="15" />
 
-                <TextBox Width="328"
+                <TextBox Width="385"
                          Height="30"
                          Margin="20,0,0,0"
                                  Tag="Введите текст для поиска Вакансии"
@@ -51,7 +51,7 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ListViewItem">
                                 <Border  Background="White"
-                                        BorderBrush="Orange"
+                                        BorderBrush="Black"
                                         BorderThickness="0"
                                         CornerRadius="10"
                                         Margin="10"
