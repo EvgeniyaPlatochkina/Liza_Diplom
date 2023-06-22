@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Icons\biznesreshenia.png" />
     <None Remove="Resources\Icons\Icon.ico" />
     <None Remove="Resources\Icons\Logo.png" />
     <None Remove="Resources\Pictures\BR1.png" />
@@ -42,6 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Icons\biznesreshenia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Icons\Icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

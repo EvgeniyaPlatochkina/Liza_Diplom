@@ -7,12 +7,12 @@
         mc:Ignorable="d"
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
-        Title="Главное окно" Height="800" Width="1300"   FontFamily="Cascadia Mono SemiBold"     
+        Title="Главное окно" Height="800" Width="1300"  FontSize="15" FontFamily="Cascadia Mono SemiBold"     
        
         Background="{StaticResource BackgroundLight}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="90"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Background="{StaticResource BackgroundVeryDark2}">

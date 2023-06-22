@@ -352,6 +352,8 @@ namespace diplomliza1.ViewModels
              || string.IsNullOrEmpty(PostalCode)
            || string.IsNullOrEmpty(Street)
            || House == 0!
+              || string.IsNullOrEmpty(Housing)
+              || string.IsNullOrEmpty(Apartament)
     );
         private void AddAdress()
         {

@@ -59,8 +59,8 @@
                 <TextBlock Text="{Binding Questionnare.PersonalQualities}" TextWrapping="Wrap"/>
                 <TextBlock Text="Обо мне"/>
                 <TextBlock Text="{Binding Questionnare.AboutMe}" TextWrapping="Wrap"/>
-                <Button Command="{Binding OpenAcceptApplicantWindow,UpdateSourceTrigger=PropertyChanged}" Content="Назначить встречу" Margin="10" Height="40" Width="150" Style="{StaticResource ButtonStyle4}" FontStyle="Italic"/>
-                <Button Command="{Binding RejectQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Отклонить" Margin="10" Height="40" Width="150" 
+                <Button Command="{Binding OpenAcceptApplicantWindow,UpdateSourceTrigger=PropertyChanged}"  FontFamily="Cascadia Mono SemiBold" Content="Назначить встречу" Margin="10" Height="40" Width="150" Style="{StaticResource ButtonStyle4}" FontStyle="Italic"/>
+                <Button Command="{Binding RejectQuestionnareButton,UpdateSourceTrigger=PropertyChanged}"  FontFamily="Cascadia Mono SemiBold" Content="Отклонить" Margin="10" Height="40" Width="150" 
                         FontWeight="Bold"
                        Style="{StaticResource ButtonStyle4}" FontStyle="Italic"/>
             </StackPanel>

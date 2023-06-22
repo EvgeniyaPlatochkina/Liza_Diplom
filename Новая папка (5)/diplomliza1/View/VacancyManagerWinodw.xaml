@@ -9,6 +9,7 @@
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
         Title="Добавление вакансии" Height="500" Width="550" FontFamily="Cascadia Mono SemiBold"
+        FontSize="15"
            Background="{StaticResource BackgroundLight}">
     <Grid>
         <StackPanel>
@@ -18,7 +19,7 @@
             <TextBox MaxLength="11" Style="{StaticResource TextBox3}" Text="{Binding Earnings,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Width="512"/>
             <TextBlock Text="Описание" Margin="10,10,10,0"/>
             <TextBox Style="{StaticResource TextBox3}" Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" Height="108" TextWrapping="Wrap" Width="517"/>
-            <Button Style="{StaticResource ButtonStyle4}" x:Name="ActionButton" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="40" Width="150" Content="Добавить" Background="{StaticResource BackgroundDark}"/>
+            <Button Style="{StaticResource ButtonStyle4}"  FontFamily="Cascadia Mono SemiBold" x:Name="ActionButton" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="40" Width="150" Content="Добавить" Background="{StaticResource BackgroundDark}"/>
         </StackPanel>
    
     </Grid>

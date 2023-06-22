@@ -50,14 +50,14 @@
                     Margin="10"
                     FontSize="15"
                     Style="{StaticResource ButtonStyle5}"
-                    Command="{Binding AuthorizationButton,UpdateSourceTrigger=PropertyChanged}" Height="35"/>
+                    Command="{Binding AuthorizationButton,UpdateSourceTrigger=PropertyChanged}" Height="35"  FontFamily="Cascadia Mono SemiBold"/>
 
             <Button Content="Регистрация"
                   Style="{StaticResource ButtonStyle5}"
                     Width="104"
                     FontSize="15"
                     Margin="10"
-                    Command="{Binding RegistrationButton,UpdateSourceTrigger=PropertyChanged}"/>
+                    Command="{Binding RegistrationButton,UpdateSourceTrigger=PropertyChanged}"  FontFamily="Cascadia Mono SemiBold"/>
 
         </StackPanel>
     </Grid>

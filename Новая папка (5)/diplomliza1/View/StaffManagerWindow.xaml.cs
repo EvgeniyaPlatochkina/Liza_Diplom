@@ -29,13 +29,13 @@ namespace diplomliza1.View
             var viewModel = new StaffManagerViewModel(ctx, staff, staffService);
             if (staff == null)
             {
-                Title = "Создание вопроса";
+                Title = "Создание";
                 ActionButton.Content = "Создать";
                 ActionButton.Command = viewModel.AddStaffButton;
             }
             else
             {
-                Title = "Редактирование вопроса";
+                Title = "Редактирование";
                 ActionButton.Content = "Сохранить";
                 ActionButton.Command = viewModel.EditStaffButton;
             }

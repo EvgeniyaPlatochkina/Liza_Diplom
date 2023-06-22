@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:diplomliza1.View"
              mc:Ignorable="d" 
              d:DesignHeight="480" d:DesignWidth="850"
-             FontFamily="Cascadia Mono SemiBold">
+             FontFamily="Cascadia Mono SemiBold" FontSize="15">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -42,7 +42,7 @@
                                             <ColumnDefinition Width="12"/>
                                             <ColumnDefinition Width="120"/>
                                             <ColumnDefinition/>
-                                            <ColumnDefinition Width="110"/>
+                                            <ColumnDefinition Width="150"/>
                                             <ColumnDefinition Width="12"/>
 
                                         </Grid.ColumnDefinitions>
@@ -93,7 +93,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Style="{StaticResource ButtonStyle5}" Grid.Column="0" Content="Посмотреть Информацию" Command="{Binding QuestionnarieApplicantPageButton,UpdateSourceTrigger=PropertyChanged}" Margin="10,3" Background="{StaticResource BackgroundVeryDark2}"/>
+            <Button Style="{StaticResource ButtonStyle5}"  FontFamily="Cascadia Mono SemiBold" Grid.Column="0" Content="Посмотреть Информацию" Command="{Binding QuestionnarieApplicantPageButton,UpdateSourceTrigger=PropertyChanged}" Margin="10,3" Background="{StaticResource BackgroundVeryDark2}"/>
         </Grid>
     </Grid>
 </UserControl>

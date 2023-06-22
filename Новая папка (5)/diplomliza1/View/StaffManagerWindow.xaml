@@ -8,7 +8,8 @@
           Icon="{StaticResource Icon}"
         WindowStartupLocation="CenterScreen"
          ResizeMode="NoResize"
-        Title="Добавление сотрудника" Height="576" Width="881"       FontFamily="Cascadia Mono SemiBold">
+        Title="Добавление сотрудника" Height="576" Width="881"       FontFamily="Cascadia Mono SemiBold"
+        FontSize="15">
 
     <Grid Background="{StaticResource BackgroundLight}">
        
@@ -102,7 +103,7 @@
                           
                               SelectedItem="{Binding SelectedPlaceOfStudys,UpdateSourceTrigger=PropertyChanged}"
                            DisplayMemberPath="FullPlaceOfStudy" Width="408"/>
-                        <Button Style="{StaticResource ButtonStyle4}" x:Name="ActionButton" Content="Сохранить" Command="{Binding AddStaffButton,UpdateSourceTrigger=PropertyChanged}" Margin="10" Height="40" Width="100" Background="{StaticResource BackgroundDark}"/>
+                        <Button Style="{StaticResource ButtonStyle4}"  FontFamily="Cascadia Mono SemiBold" x:Name="ActionButton" Content="Сохранить" Command="{Binding AddStaffButton,UpdateSourceTrigger=PropertyChanged}" Margin="10" Height="40" Width="100" Background="{StaticResource BackgroundDark}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -120,7 +121,7 @@
                         <TextBox Style="{StaticResource TextBox5}" Text="{Binding IssuedByDate,UpdateSourceTrigger=PropertyChanged}"  Margin="10,0,10,0"/>
                         <TextBlock Text="Прописка" Margin="10,10,10,0"/>
                         <TextBox Style="{StaticResource TextBox5}" Text="{Binding Registration,UpdateSourceTrigger=PropertyChanged}"  Margin="10,0,10,0"/>
-                        <Button Style="{StaticResource ButtonStyle4}" Content="Добавить" Command="{Binding AddPassportButton,UpdateSourceTrigger=PropertyChanged}" Margin="70" Height="40" Width="150" Background="{StaticResource BackgroundDark}"/>
+                        <Button Style="{StaticResource ButtonStyle4}"  FontFamily="Cascadia Mono SemiBold" Content="Добавить" Command="{Binding AddPassportButton,UpdateSourceTrigger=PropertyChanged}" Margin="70" Height="40" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
                 </Grid>
             </TabItem>
@@ -142,7 +143,7 @@
                         <TextBox Style="{StaticResource TextBox5}" Text="{Binding Apartament,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
                         <TextBlock Text="Почтовый индекс" Margin="10,10,10,0"/>
                         <TextBox Style="{StaticResource TextBox5}" Text="{Binding PostalCode,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
-                        <Button Style="{StaticResource ButtonStyle4}" Content="Добавить" Command="{Binding AddAdressButton,UpdateSourceTrigger=PropertyChanged}" Margin="5" Height="35" Width="150" Background="{StaticResource BackgroundDark}" />
+                        <Button Style="{StaticResource ButtonStyle4}"  FontFamily="Cascadia Mono SemiBold" Content="Добавить" Command="{Binding AddAdressButton,UpdateSourceTrigger=PropertyChanged}" Margin="5" Height="35" Width="150" Background="{StaticResource BackgroundDark}" />
                 </StackPanel>
                 </Grid>
             </TabItem>
@@ -158,7 +159,7 @@
                     <ComboBox ItemsSource="{Binding Educations,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"
                               SelectedItem="{Binding SelectedEducation,UpdateSourceTrigger=PropertyChanged}"
                               DisplayMemberPath="Title" Width="846"/>
-                    <Button Style="{StaticResource ButtonStyle4}" Content="Добавить" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
+                    <Button Style="{StaticResource ButtonStyle4}" Content="Добавить"  FontFamily="Cascadia Mono SemiBold" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
                 
             </TabItem>
@@ -167,14 +168,14 @@
 
                     <TextBlock Text="Номер ИНН"  Margin="10,10,10,0"/>
                     <TextBox MaxLength="11" Style="{StaticResource TextBox5}" Text="{Binding TitleINN,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
-                    <Button Style="{StaticResource ButtonStyle4}" Content="Добавить" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
+                    <Button Style="{StaticResource ButtonStyle4}" Content="Добавить"  FontFamily="Cascadia Mono SemiBold" Command="{Binding AddJobTitleButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Номер СНИЛС">
                 <StackPanel>
                     <TextBlock Text="CНИЛС" Margin="10,10,10,0"/>
                     <TextBox MaxLength="11" Style="{StaticResource TextBox5}" Text="{Binding SnilsTile,UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0"/>
-                    <Button Style="{StaticResource ButtonStyle4}" Content="Добавить" Command="{Binding AddSnilsButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
+                    <Button Style="{StaticResource ButtonStyle4}" Content="Добавить"  FontFamily="Cascadia Mono SemiBold" Command="{Binding AddSnilsButton,UpdateSourceTrigger=PropertyChanged}" Margin="150" Height="45" Width="150" Background="{StaticResource BackgroundDark}"/>
                 </StackPanel>
              
             </TabItem>

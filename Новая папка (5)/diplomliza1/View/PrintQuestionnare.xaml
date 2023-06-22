@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
 
-        <Button Click="Button_Click" Content="Печать"  Grid.Row="1" Margin="658,5,10,0"  Style="{StaticResource ButtonStyle6}"/>
+        <Button Click="Button_Click" Content="Печать"  Grid.Row="1" Margin="658,5,10,0"  Style="{StaticResource ButtonStyle6}"  FontFamily="Cascadia Mono SemiBold"/>
         <Grid Grid.ColumnSpan="2" x:Name="Stac_print">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="231*"/>

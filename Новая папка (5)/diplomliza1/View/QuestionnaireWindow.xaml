@@ -81,7 +81,7 @@
                         <TextBlock Text="Обо мне"/>
                         <TextBox Style="{StaticResource TextBox3}" Height="63" Text="{Binding AboutMe,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Width="394"/>
                         <Button Style="{StaticResource ButtonStyle5}" Command="{Binding AddQuestionnareButton,UpdateSourceTrigger=PropertyChanged}" Content="Сохранить" Margin="10" Height="40" Width="150"
-                                   Background="{StaticResource BackgroundVeryDark2}"/>
+                                   Background="{StaticResource BackgroundVeryDark2}"  FontFamily="Cascadia Mono SemiBold"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -97,7 +97,7 @@
                               Margin=" 0 0 60 0"
                               SelectedItem="{Binding SelectedEducation, UpdateSourceTrigger=PropertyChanged}"
                             DisplayMemberPath="Title" Width="754"/>
-                    <Button Style="{StaticResource ButtonStyle5}" Content="Сохранить" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="200" Height="40" Width="150"
+                    <Button Style="{StaticResource ButtonStyle5}" Content="Сохранить"  FontFamily="Cascadia Mono SemiBold" Command="{Binding PlaceOfStydeButton,UpdateSourceTrigger=PropertyChanged}" Margin="200" Height="40" Width="150"
                              Background="{StaticResource BackgroundVeryDark2}"/>
                 </StackPanel>
 
@@ -110,7 +110,7 @@
                     <TextBlock Text="Отработанное время"/>
                     <TextBox Style="{StaticResource TextBox3}" Text="{Binding HoursWorked,UpdateSourceTrigger=PropertyChanged}" Width="772"
                            MaxLength="10" />
-                    <Button Style="{StaticResource ButtonStyle5}" Content="Сохранить" Command="{Binding AddWorkExpirienceButton, UpdateSourceTrigger=PropertyChanged}" Margin="240" Height="40" Width="150" 
+                    <Button Style="{StaticResource ButtonStyle5}" Content="Сохранить"  FontFamily="Cascadia Mono SemiBold" Command="{Binding AddWorkExpirienceButton, UpdateSourceTrigger=PropertyChanged}" Margin="240" Height="40" Width="150" 
                                 Background="{StaticResource BackgroundVeryDark2}"/>
                 </StackPanel>
 

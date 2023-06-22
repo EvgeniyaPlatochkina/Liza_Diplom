@@ -28,13 +28,13 @@ namespace diplomliza1.View
             var viewModel = new VacancuManagerViewModle(jobTitle, jobTitleService);
             if (jobTitle == null)
             {
-                Title = "Создание вопроса";
+                Title = "Создание вакансии";
                 ActionButton.Content = "Создать";
                 ActionButton.Command = viewModel.AddJobTitleButton;
             }
             else
             {
-                Title = "Редактирование вопроса";
+                Title = "Редактирование вакансии";
                 ActionButton.Content = "Сохранить";
                 ActionButton.Command = viewModel.EditJobTitleButton;
             }

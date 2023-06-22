@@ -58,6 +58,7 @@
             <Button 
                 Content="Сохранить"
                 Style="{StaticResource ButtonStyle5}"
+                 FontFamily="Cascadia Mono SemiBold"
                 Command="{Binding Registrationbutton,UpdateSourceTrigger=PropertyChanged}"
                 Background="{StaticResource BackgroundVeryDark2}"
                 Margin=" 0 0 0 10" Height="30" Width="208"/>
@@ -65,6 +66,7 @@
                 Content="Авторизация" 
                 Style="{StaticResource ButtonStyle5}"
                  Background="{StaticResource BackgroundVeryDark2}"
+                 FontFamily="Cascadia Mono SemiBold"
                 Command="{Binding ExitButton, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="154"/>
         </StackPanel>
 
